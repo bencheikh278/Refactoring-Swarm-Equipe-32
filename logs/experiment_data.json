@@ -1,11 +1,35 @@
 [
-  {
-    "id": "9e82e9b0-9b43-4a78-af43-d5d5ef848a2f",
-    "timestamp": "2025-12-26T01:26:41.177789",
-    "agent": "System",
-    "model": "unknown",
-    "action": "STARTUP",
-    "details": "Target: ./sandbox",
-    "status": "INFO"
-  }
+    {
+        "id": "9e82e9b0-9b43-4a78-af43-d5d5ef848a2f",
+        "timestamp": "2025-12-26T01:26:41.177789",
+        "agent": "System",
+        "model": "unknown",
+        "action": "STARTUP",
+        "details": "Target: ./sandbox",
+        "status": "INFO"
+    },
+    {
+        "id": "a932548f-2eca-416a-9a36-7b6b3b12af97",
+        "timestamp": "2026-01-05T21:35:03.410683",
+        "agent": "System",
+        "model": "gemini-2.0-flash-exp",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Target directory: ./sandbox",
+            "output_response": "System initialized"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "eddfcc31-96e5-4916-b244-ca655bf3c759",
+        "timestamp": "2026-01-05T21:35:03.416780",
+        "agent": "Orchestrator",
+        "model": "gemini-2.0-flash-exp",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse du dossier ./sandbox",
+            "output_response": "Analyse simulée - système en cours de développement"
+        },
+        "status": "SUCCESS"
+    }
 ]
