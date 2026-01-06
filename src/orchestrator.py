@@ -5,57 +5,35 @@ from src.agents.fixer import FixerAgent
 from src.agents.tester import TesterAgent
 
 class Orchestrator:
-    """
-    Système multi-agents de refactoring
-    """
-    
-    def __init__(self, target_dir):
+    def __init__(self, target_dir, max_iterations=15):
         self.target_dir = target_dir
-        self.max_iterations =15
-        
-        print(" Initialisation des agents")
+        self.max_iterations = max_iterations
+#initialisation des agents
         self.auditor = AuditorAgent()
-        print(" Auditeur prêt")
         self.fixer = FixerAgent()
-        print(" Correcteur prêt")
         self.tester = TesterAgent()
-        print(" Testeur prêt")
-    
+
     def run(self):
-        """
-        Lance le processus de refactoring
-        """
-        print("=" * 60)
-        print("DÉBUT DU PROCESSUS")
-        print("=" * 60)
-        
-        print("\n PHASE 1 : ANALYSE")
-        issues = self.auditor.analyze(self.target_dir) #need this methode here
-        print(f" {len(issues)} problem found")
-        
-        # Log de l'analyse
-        log_experiment(
-            agent_name="Auditor",
-            model_used="gemini-2.0-flash-exp",
-            action=ActionType.ANALYSIS,
-            details={
-                "input_prompt": f"Analyser le code dans {self.target_dir}",
-                "output_response": f"Trouvé {len(issues)} problèmes"
-            },
-            status="SUCCESS"
-        )
-        #=============================================================================
-        print("\n PHASE 2 : BOUCLE DE CORRECTION")
+        #analyse phase
 
-          
-          
-        #=============================================================================
+        issues = self.auditor.analyze(self.target_dir)
+#phase2 and 3: fixing and testing
 
-        print("\n PHASE 3 : Tests...")
-        
-        
+        for iteration in range(self.max_iterations):
+            #fix
+            self.fixer.fix(self.target_dir, issues)
+#test
+            test_result = self.tester.test(self.target_dir)
+
+            if test_result["passed"]:
+                return {
+                    "success": True,
+                    "iterations": iteration + 1
+                }
+
+            issues = test_result["errors"]
+
         return {
-             'success': False,
-            'iterations': self.max_iterations,
-            'message': 'echc apres 15 tentatives'
+            "success": False,
+            "iterations": self.max_iterations
         }
