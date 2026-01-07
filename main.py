@@ -2,7 +2,7 @@ import argparse
 import sys
 import os
 from dotenv import load_dotenv
-from src.utils.logger import log_experiment
+from src.utils.logger import log_experiment, ActionType
 
 load_dotenv()
 
@@ -16,7 +16,18 @@ def main():
         sys.exit(1)
 
     print(f"🚀 DEMARRAGE SUR : {args.target_dir}")
-    log_experiment("System", "STARTUP", f"Target: {args.target_dir}", "INFO")
+
+    # --- TEST LOGGER (Data Officer) ---
+    log_experiment(
+        agent_name="System",
+        model_used="N/A",
+        action=ActionType.ANALYSIS,
+        details={"input_prompt": "Initialisation TP", "output_response": "Logger OK"},
+        status="SUCCESS"
+    )
+    print("✅ Logger testé avec succès")
+
+    # Ici viendrait le reste de l'orchestration des agents
     print("✅ MISSION_COMPLETE")
 
 if __name__ == "__main__":
