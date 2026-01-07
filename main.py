@@ -3,6 +3,7 @@ import sys
 import os
 from dotenv import load_dotenv
 from src.utils.logger import log_experiment, ActionType
+from src.orchestrator import Orchestrator
 
 load_dotenv()
 
@@ -29,6 +30,26 @@ def main():
 
     # Ici viendrait le reste de l'orchestration des agents
     print("✅ MISSION_COMPLETE")
+ # Lance l'orchestrateur
+    try:
+        orchestrator = Orchestrator(args.target_dir)
+        result = orchestrator.run()
+        
+        # Vérifie le résultat
+        if result['success']:
+            print(" MISSION_COMPLETE")
+            sys.exit(0)
+        else:
+            print(f" MISSION_FAILED : {result['message']}")
+            sys.exit(1)
+
+   
+        
+    except Exception as e:
+        print(f"ERREUR : {e}")
+    
+        sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
