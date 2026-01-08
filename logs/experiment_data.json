@@ -19,5 +19,89 @@
             "output_response": "Target directory: ."
         },
         "status": "SUCCESS"
+    },
+    {
+        "id": "c7cf0263-7fff-4bef-907c-18e2ba6e68e8",
+        "timestamp": "2026-01-07T13:42:09.818397",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ce1ef51c-af1b-4caa-98de-cf392cabcee3",
+        "timestamp": "2026-01-08T12:29:41.250140",
+        "agent": "Auditeur",
+        "model": "GPT-4",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse du fichier main.py",
+            "output_response": "Aucune erreur détectée"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "caf21ad8-d864-420b-8ea1-6dfdf5304bbf",
+        "timestamp": "2026-01-08T12:29:41.252850",
+        "agent": "Correcteur",
+        "model": "GPT-4",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction docstrings et indentation",
+            "output_response": "Fichier corrigé"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f05b1e01-60ac-48ee-adf0-bc5578f9af5e",
+        "timestamp": "2026-01-08T12:29:41.253935",
+        "agent": "Débogueur",
+        "model": "GPT-4",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Exécution tests unitaires",
+            "output_response": "Tous les tests passent"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b211cb39-e841-4db6-a820-f31516dc74d3",
+        "timestamp": "2026-01-08T12:29:41.254946",
+        "agent": "Générateur de tests",
+        "model": "GPT-4",
+        "action": "CODE_GEN",
+        "details": {
+            "input_prompt": "Création de tests pour main.py",
+            "output_response": "3 tests générés"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "fa9fcd24-2f66-4d82-99e4-d4f4723966db",
+        "timestamp": "2026-01-08T12:29:41.256092",
+        "agent": "Auditeur",
+        "model": "GPT-4",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse du fichier utils.py",
+            "output_response": "1 erreur détectée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "6e2be829-2e3f-4293-9905-74a19ec5cb2d",
+        "timestamp": "2026-01-08T12:29:41.256860",
+        "agent": "Correcteur",
+        "model": "GPT-4",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction de l'erreur utils.py",
+            "output_response": "Erreur corrigée"
+        },
+        "status": "SUCCESS"
     }
 ]
