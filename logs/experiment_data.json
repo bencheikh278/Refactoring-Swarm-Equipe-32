@@ -199,5 +199,377 @@
             "output_response": "OK"
         },
         "status": "SUCCESS"
+    },
+    {
+        "id": "058471a9-ba8c-4060-85a5-8abd1b99fefb",
+        "timestamp": "2026-01-13T14:34:33.630583",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "bbd3d5af-3205-4c63-9b41-1936441f0ccb",
+        "timestamp": "2026-01-13T14:34:33.653336",
+        "agent": "Auditeur",
+        "model": "GPT-4",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse main.py",
+            "output_response": "Aucune erreur détectée dans main.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "7bdd0e41-fc59-4a4d-97b4-9097533f42b1",
+        "timestamp": "2026-01-13T14:34:33.655359",
+        "agent": "Correcteur",
+        "model": "GPT-4",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction docstrings et indentation",
+            "output_response": "main.py corrigé"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "818ac8cc-329f-4abd-b0ab-4cecf86dab1a",
+        "timestamp": "2026-01-13T14:34:33.657267",
+        "agent": "Débogueur",
+        "model": "GPT-4",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests unitaires main.py",
+            "output_response": "Tous les tests passent"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "051465e4-a3c4-4980-8ea8-e89b5f85edac",
+        "timestamp": "2026-01-13T14:34:33.659386",
+        "agent": "Générateur de tests",
+        "model": "GPT-4",
+        "action": "CODE_GEN",
+        "details": {
+            "input_prompt": "Créer 3 tests pour main.py",
+            "output_response": "3 tests générés"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "910164e6-a235-4ae3-840e-847501844253",
+        "timestamp": "2026-01-13T14:34:33.661024",
+        "agent": "Auditeur",
+        "model": "GPT-4",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse utils.py",
+            "output_response": "1 erreur détectée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "3b7f1096-02d0-4ba5-b60c-9cbe6a8df31d",
+        "timestamp": "2026-01-13T14:34:33.662925",
+        "agent": "Correcteur",
+        "model": "GPT-4",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction de l'erreur utils.py",
+            "output_response": "utils.py corrigé"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d30d90e5-d745-42d5-a745-aa48b96cee93",
+        "timestamp": "2026-01-13T14:34:33.664834",
+        "agent": "Auditeur",
+        "model": "GPT-4",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test_code_analysis",
+            "output_response": "Aucune erreur détectée dans test_code_analysis"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f3d6ac23-cf11-4034-8707-59984a018474",
+        "timestamp": "2026-01-13T14:34:33.666338",
+        "agent": "Correcteur",
+        "model": "GPT-4",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Test FIX",
+            "output_response": "test_code_analysis corrigé"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "90a1d5bd-fbe9-4c4c-8c70-b1576c2f731a",
+        "timestamp": "2026-01-13T14:34:33.667884",
+        "agent": "Débogueur",
+        "model": "GPT-4",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests unitaires test_code_analysis",
+            "output_response": "Tous les tests passent"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "3e475e13-f7c1-45f1-bba1-a77ce74d0c3e",
+        "timestamp": "2026-01-13T14:34:33.669540",
+        "agent": "Générateur de tests",
+        "model": "GPT-4",
+        "action": "CODE_GEN",
+        "details": {
+            "input_prompt": "Créer 3 tests pour test_code_analysis",
+            "output_response": "3 tests générés"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "6a5087f4-d61e-420b-ada4-0100be5f0838",
+        "timestamp": "2026-01-13T14:34:33.671184",
+        "agent": "Auditeur",
+        "model": "GPT-4",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test_fix",
+            "output_response": "Aucune erreur détectée dans test_fix"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "26750987-b46a-4107-89b7-b7b8f27c475a",
+        "timestamp": "2026-01-13T14:34:33.672660",
+        "agent": "Correcteur",
+        "model": "GPT-4",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Test FIX",
+            "output_response": "test_fix corrigé"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "393c7779-6af8-4a64-86c6-8c2b73b82e11",
+        "timestamp": "2026-01-13T14:34:33.674368",
+        "agent": "Débogueur",
+        "model": "GPT-4",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests unitaires test_fix",
+            "output_response": "Tous les tests passent"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "2e1aa473-4143-4964-8530-e50e9b776389",
+        "timestamp": "2026-01-13T14:34:33.676396",
+        "agent": "Générateur de tests",
+        "model": "GPT-4",
+        "action": "CODE_GEN",
+        "details": {
+            "input_prompt": "Créer 3 tests pour test_fix",
+            "output_response": "3 tests générés"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "02b00ed3-b5c9-410c-aaaa-dda63a685f27",
+        "timestamp": "2026-01-13T14:34:33.678774",
+        "agent": "Auditeur",
+        "model": "GPT-4",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test_debug",
+            "output_response": "Aucune erreur détectée dans test_debug"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "e08b9cf9-c4a6-4fae-9f18-1794ea5b9689",
+        "timestamp": "2026-01-13T14:34:33.680005",
+        "agent": "Correcteur",
+        "model": "GPT-4",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Test FIX",
+            "output_response": "test_debug corrigé"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "3e0adf4c-e70a-44ba-a34a-c7b572f819b3",
+        "timestamp": "2026-01-13T14:34:33.681072",
+        "agent": "Débogueur",
+        "model": "GPT-4",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests unitaires test_debug",
+            "output_response": "Tous les tests passent"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "60f27668-5698-445c-8814-86a241a3526b",
+        "timestamp": "2026-01-13T14:34:33.682977",
+        "agent": "Générateur de tests",
+        "model": "GPT-4",
+        "action": "CODE_GEN",
+        "details": {
+            "input_prompt": "Créer 3 tests pour test_debug",
+            "output_response": "3 tests générés"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b319377e-cc1c-4ef7-ba4b-8ffcdb0252ef",
+        "timestamp": "2026-01-13T14:34:33.684316",
+        "agent": "Auditeur",
+        "model": "GPT-4",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test_code_gen",
+            "output_response": "Aucune erreur détectée dans test_code_gen"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "3c940844-2262-423a-8947-04aeb8d62c2e",
+        "timestamp": "2026-01-13T14:34:33.685718",
+        "agent": "Correcteur",
+        "model": "GPT-4",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Test FIX",
+            "output_response": "test_code_gen corrigé"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ad6e5893-f334-440c-8b40-387920610114",
+        "timestamp": "2026-01-13T14:34:33.686768",
+        "agent": "Débogueur",
+        "model": "GPT-4",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests unitaires test_code_gen",
+            "output_response": "Tous les tests passent"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "2e9ce9ea-5902-4f7b-a514-59d1ea4bd61b",
+        "timestamp": "2026-01-13T14:34:33.688039",
+        "agent": "Générateur de tests",
+        "model": "GPT-4",
+        "action": "CODE_GEN",
+        "details": {
+            "input_prompt": "Créer 3 tests pour test_code_gen",
+            "output_response": "3 tests générés"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ac61c9b6-503b-4b5a-9bf1-5ed96d111bca",
+        "timestamp": "2026-01-13T14:36:09.006235",
+        "agent": "Auditeur",
+        "model": "GPT-4",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Test CODE_ANALYSIS",
+            "output_response": "OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "fd125f87-084a-446a-ad50-9767fef3fc58",
+        "timestamp": "2026-01-13T14:36:09.009449",
+        "agent": "Correcteur",
+        "model": "GPT-4",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Test FIX",
+            "output_response": "OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "858db9cf-edfb-4fe2-8ca2-6962eb0448be",
+        "timestamp": "2026-01-13T14:36:09.011391",
+        "agent": "Débogueur",
+        "model": "GPT-4",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Test DEBUG",
+            "output_response": "OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "54f3cfd0-761b-4cdb-8746-1b455d4c0b70",
+        "timestamp": "2026-01-13T14:36:09.012954",
+        "agent": "Générateur de tests",
+        "model": "GPT-4",
+        "action": "CODE_GEN",
+        "details": {
+            "input_prompt": "Test CODE_GEN",
+            "output_response": "OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "75d01bf0-4414-4b11-9a9c-619f31b977ad",
+        "timestamp": "2026-01-13T14:38:27.681400",
+        "agent": "Auditeur",
+        "model": "GPT-4",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Test CODE_ANALYSIS",
+            "output_response": "OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "78bc84c3-60b4-46ea-8c5b-1a2072590712",
+        "timestamp": "2026-01-13T14:38:27.683376",
+        "agent": "Correcteur",
+        "model": "GPT-4",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Test FIX",
+            "output_response": "OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "97fb1bff-40f3-4c51-918f-1a707bb5b7c5",
+        "timestamp": "2026-01-13T14:38:27.685063",
+        "agent": "Débogueur",
+        "model": "GPT-4",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Test DEBUG",
+            "output_response": "OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "09ee5b5f-3c41-40f8-ad1f-b6496d5d7cea",
+        "timestamp": "2026-01-13T14:38:27.686762",
+        "agent": "Générateur de tests",
+        "model": "GPT-4",
+        "action": "CODE_GEN",
+        "details": {
+            "input_prompt": "Test CODE_GEN",
+            "output_response": "OK"
+        },
+        "status": "SUCCESS"
     }
 ]
