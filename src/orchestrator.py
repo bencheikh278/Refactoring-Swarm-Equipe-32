@@ -1,39 +1,39 @@
-# src/orchestrator.py
 
-from src.agents import auditeur, correcteur, debugueur, generateur_tests
 from src.utils.logger import log_experiment, ActionType
+from src.agents.auditor import AuditorAgent
+from src.agents.fixer import FixerAgent
+from src.agents.tester import TesterAgent
 
 class Orchestrator:
-    def __init__(self, target_dir):
+    def __init__(self, target_dir, max_iterations=15):
         self.target_dir = target_dir
+        self.max_iterations = max_iterations
+#initialisation des agents
+        self.auditor = AuditorAgent()
+        self.fixer = FixerAgent()
+        self.tester = TesterAgent()
 
     def run(self):
-        try:
-            # 1. Analyse main.py
-            auditeur.analyser_fichier("main.py")
+        #analyse phase
 
-            # 2. Correction main.py
-            correcteur.appliquer_correction("main.py", "Correction docstrings et indentation")
+        issues = self.auditor.analyze(self.target_dir)
+#phase2 and 3: fixing and testing
 
-            # 3. Débogage main.py
-            debugueur.executer_tests("main.py")
+        for iteration in range(self.max_iterations):
+            #fix
+            self.fixer.fix(self.target_dir, issues)
+#test
+            test_result = self.tester.test(self.target_dir)
 
-            # 4. Génération de tests main.py
-            generateur_tests.creer_tests("main.py")
+            if test_result["passed"]:
+                return {
+                    "success": True,
+                    "iterations": iteration + 1
+                }
 
-            # 5. Analyse utils.py avec erreur simulée
-            auditeur.analyser_fichier("utils.py", resultat="1 erreur détectée", status="FAILURE")
+            issues = test_result["errors"]
 
-            # 6. Correction utils.py
-            correcteur.appliquer_correction("utils.py", "Correction de l'erreur utils.py")
-
-            # 7. Tests génériques pour validation
-            for fichier in ["test_code_analysis", "test_fix", "test_debug", "test_code_gen"]:
-                auditeur.analyser_fichier(fichier)
-                correcteur.appliquer_correction(fichier, "Test FIX")
-                debugueur.executer_tests(fichier)
-                generateur_tests.creer_tests(fichier)
-
-            return {"success": True, "message": "TP exécuté avec succès"}
-        except Exception as e:
-            return {"success": False, "message": str(e)}
+        return {
+            "success": False,
+            "iterations": self.max_iterations
+        }
