@@ -1,0 +1,74 @@
+[
+    {
+        "id": "8b20accd-d3eb-4646-b21a-b1a8e69f0865",
+        "timestamp": "2026-01-09T21:54:25.597458",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_GEN",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "Bonjour, ceci est un test TP IGL !"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "90c476cd-2412-4095-94ec-d3d33a9a7966",
+        "timestamp": "2026-01-09T21:54:25.597458",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "Bonjour, ceci est un test TP IGL !"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c0021fa9-fb30-4022-bb2e-3431a5cc114d",
+        "timestamp": "2026-01-09T21:54:25.613078",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "33dac533-0bd8-4b68-9dee-e2f5d220e9b7",
+        "timestamp": "2026-01-09T21:54:28.049543",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_GEN",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "Bonjour, ceci est un test TP IGL !"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d26e8897-ddde-466a-8b0d-6851ba956b81",
+        "timestamp": "2026-01-09T21:54:28.049543",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "Bonjour, ceci est un test TP IGL !"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "7e196d1c-b630-4f06-90f8-2df3942e8be5",
+        "timestamp": "2026-01-09T21:54:28.065195",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    }
+]
