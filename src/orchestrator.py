@@ -1,8 +1,8 @@
 
 from src.utils.logger import log_experiment, ActionType
-from src.agents.auditor import AuditorAgent
-from src.agents.fixer import FixerAgent
-from src.agents.tester import TesterAgent
+from src.agents.auditeur import AuditorAgent
+from src.agents.correcteur import FixerAgent
+from src.agents.debugueur import TesterAgent
 
 class Orchestrator:
     def __init__(self, target_dir, max_iterations=15):
