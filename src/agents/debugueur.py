@@ -1,22 +1,25 @@
 from src.utils.logger import log_experiment, ActionType
+from src.utils.Corrector import run_pytest_for_file
+
 class TesterAgent:
     def __init__(self):
         self.name = "DebuggerAgent"
 
-    def test(self, fichier):
-        resultat = executer_tests(fichier)
+    def test(self, filename):
 
-        return {
-            "passed": True,
-            "message": resultat
-        }
-def executer_tests(fichier):
-    resultat = "Tous les tests passent"
-    log_experiment(
-        agent_name="Débogueur",
-        model_used="GPT-4",
-        action=ActionType.DEBUG,
-        details={"input_prompt": f"Tests unitaires {fichier}", "output_response": resultat},
-        status="SUCCESS"
-    )
-    return resultat
+        result = run_pytest_for_file(filename)
+
+        status = "SUCCESS" if result["passed"] else "FAILURE"
+
+        log_experiment(
+            agent_name="Débogueur",
+            model_used="local",
+            action=ActionType.DEBUG,
+            details={
+                "input_prompt": f"Tests {filename}",
+                "output_response": result["output"]
+            },
+            status=status
+        )
+
+        return result
