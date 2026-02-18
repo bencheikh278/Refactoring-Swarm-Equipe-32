@@ -1,23 +1,35 @@
 from src.utils.logger import log_experiment, ActionType
+from src.utils import read_file_and_check_syntax  # adjust import if needed
+
 class AuditorAgent:
     def __init__(self):
         self.name = "AuditorAgent"
 
-    def analyze(self, fichier):
-        resultat = analyser_fichier(fichier)
+    def analyze(self, filename):
+
+        content, error = read_file_and_check_syntax(filename)
+
+        if error:
+            status = "FAILURE"
+            message = error
+            issues = 1
+        else:
+            status = "SUCCESS"
+            message = f"Aucune erreur détectée dans {filename}"
+            issues = 0
+
+        log_experiment(
+            agent_name="Auditeur",
+            model_used="local",
+            action=ActionType.ANALYSIS,
+            details={
+                "input_prompt": f"Analyse {filename}",
+                "output_response": message
+            },
+            status=status
+        )
 
         return {
-            "issues_found": 0,
-            "message": resultat
+            "issues_found": issues,
+            "message": message
         }
-def analyser_fichier(fichier, resultat=None, status="SUCCESS"):
-    if resultat is None:
-        resultat = f"Aucune erreur détectée dans {fichier}"
-    log_experiment(
-        agent_name="Auditeur",
-        model_used="GPT-4",
-        action=ActionType.ANALYSIS,
-        details={"input_prompt": f"Analyse {fichier}", "output_response": resultat},
-        status=status
-    )
-    return resultat
