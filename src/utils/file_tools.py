@@ -6,7 +6,7 @@ from utils.logger import log_experiment, ActionType  # ton logger existant
 # -----------------------------
 SANDBOX_DIR = os.path.join(os.path.dirname(__file__), '..', 'sandbox')
 os.makedirs(SANDBOX_DIR, exist_ok=True)  # crée le dossier s'il n'existe pas
-
+print("SANDBOX_DIR =", SANDBOX_DIR) 
 # -----------------------------
 # Écriture sécurisée dans sandbox
 # -----------------------------
