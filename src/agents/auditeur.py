@@ -1,5 +1,5 @@
 from src.utils.logger import log_experiment, ActionType
-from src.utils import read_file_and_check_syntax  # adjust import if needed
+from src.utils.file_tools import read_file_and_check_syntax  # adjust import if needed
 
 class AuditorAgent:
     def __init__(self):
