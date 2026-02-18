@@ -1,5 +1,5 @@
 from src.utils.logger import log_experiment, ActionType
-from src.utils import run_pytest_for_file
+from src.utils.Corrector import run_pytest_for_file
 
 class TesterAgent:
     def __init__(self):
