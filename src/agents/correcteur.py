@@ -1,25 +1,25 @@
 from src.utils.logger import log_experiment, ActionType
-from src.utils import simple_corrector
+from src.utils import run_pytest_for_file
 
-class FixerAgent:
+class TesterAgent:
     def __init__(self):
-        self.name = "CorrectorAgent"
+        self.name = "DebuggerAgent"
 
-    def fix(self, filename):
+    def test(self, filename):
 
-        success = simple_corrector(filename)
+        result = run_pytest_for_file(filename)
 
-        status = "SUCCESS" if success else "FAILURE"
+        status = "SUCCESS" if result["passed"] else "FAILURE"
 
         log_experiment(
-            agent_name="Correcteur",
+            agent_name="Débogueur",
             model_used="local",
-            action=ActionType.FIX,
+            action=ActionType.DEBUG,
             details={
-                "input_prompt": f"Correction {filename}",
-                "output_response": "Correction appliquée"
+                "input_prompt": f"Tests {filename}",
+                "output_response": result["output"]
             },
             status=status
         )
 
-        return success
+        return result
