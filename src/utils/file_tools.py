@@ -38,6 +38,8 @@ def read_file(filename):
     """
     Lit le contenu d'un fichier du sandbox et logue l'action.
     """
+    if not os.path.exists(SANDBOX_DIR):
+        raise FileNotFoundError(f"Le dossier sandbox n'existe pas : {SANDBOX_DIR}")
     filepath = os.path.join(SANDBOX_DIR, os.path.basename(filename))
 
     if not os.path.exists(filepath):
