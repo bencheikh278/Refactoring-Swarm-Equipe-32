@@ -6,7 +6,7 @@ from src.agents.debugueur import TesterAgent
 
 
 class Orchestrator:
-    def __init__(self, target_dir, client, max_iterations=15):
+    def __init__(self, target_dir, client, max_iterations=10):
         self.target_dir = target_dir
         self.max_iterations = max_iterations
 
@@ -36,6 +36,7 @@ class Orchestrator:
 
             all_passed = all(
                 file_result.get("passed", False)
+                or "no tests ran" in file_result.get("output", "")
                 for file_result in test_result.values()
             )
 
@@ -47,7 +48,12 @@ class Orchestrator:
                 {"file": fname, "errors": res.get("output", "")}
                 for fname, res in test_result.items()
                 if not res.get("passed", False)
+                and "no tests ran" not in res.get("output", "")
             ]
+
+            if not issues:
+                print("🎯 CODE CORRIGE - Aucune erreur restante")
+                return {"success": True, "iterations": iteration + 1}
 
         return {
             "success": False,

@@ -21,7 +21,7 @@ class AuditorAgent:
                         full_code += f"\n\n# FILE: {file}\n"
                         full_code += f.read()
 
-        with open("prompts/auditeur_prompts.md", "r") as f:
+        with open("prompts/auditeur_prompts.md", "r", encoding="utf-8")  as f:
             prompt_template = f.read()
 
         full_prompt = prompt_template + "\n\nVoici le code :\n" + full_code

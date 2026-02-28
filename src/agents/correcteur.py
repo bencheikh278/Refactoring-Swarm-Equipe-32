@@ -17,10 +17,11 @@ class FixerAgent:
             print(f"⚠️  Fichier introuvable : {filepath}")
             return False
 
-        with open(filepath, "r") as f:
+        # Lire avec UTF-8
+        with open(filepath, "r", encoding="utf-8") as f:
             code = f.read()
 
-        with open("prompts/correcteur_prompts.md", "r") as f:
+        with open("prompts/correcteur_prompts.md", "r", encoding="utf-8") as f:
             system_prompt = f.read()
 
         full_prompt = f"""
@@ -29,10 +30,11 @@ class FixerAgent:
 Plan de correction :
 {issues}
 
-Code à corriger ({filename}) :
+Code a corriger ({filename}) :
 {code}
 
-Retourne uniquement le code Python corrigé complet, sans balises markdown.
+Retourne uniquement le code Python corrige complet, sans balises markdown.
+Le fichier doit commencer par: # -*- coding: utf-8 -*-
 """
 
         response = self.client.chat.completions.create(
@@ -42,12 +44,17 @@ Retourne uniquement le code Python corrigé complet, sans balises markdown.
 
         fixed_code = response.choices[0].message.content
 
-        # Nettoyer les balises markdown si présentes
+        # Nettoyer les balises markdown si presentes
         if fixed_code.startswith("```"):
             lines = fixed_code.split("\n")
             fixed_code = "\n".join(lines[1:-1]) if lines[-1].strip() == "```" else "\n".join(lines[1:])
 
-        with open(filepath, "w") as f:
+        # Ajouter l'encodage si absent
+        if "coding: utf-8" not in fixed_code[:50]:
+            fixed_code = "# -*- coding: utf-8 -*-\n" + fixed_code
+
+        # Ecrire avec UTF-8
+        with open(filepath, "w", encoding="utf-8") as f:
             f.write(fixed_code)
 
         log_experiment(
