@@ -4,9 +4,8 @@ from src.utils.Corrector import simple_corrector
 # -----------------------------
 # Chemin vers le sandbox
 # -----------------------------
-SANDBOX_DIR = os.path.join(os.path.dirname(__file__), '..', 'sandbox')
-
-print("SANDBOX_DIR =", SANDBOX_DIR) 
+SANDBOX_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'sandbox'))
+print("SANDBOX_DIR =", SANDBOX_DIR)
 # -----------------------------
 # Écriture sécurisée dans sandbox
 # -----------------------------
