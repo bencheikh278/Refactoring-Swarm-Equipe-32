@@ -1207,5 +1207,1961 @@
             "output_response": "Logger OK"
         },
         "status": "SUCCESS"
+    },
+    {
+        "id": "2915467a-2afa-48f0-a181-39d440c790aa",
+        "timestamp": "2026-02-28T14:34:15.201605",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "499f35b3-b91d-420c-a181-57a2046e7935",
+        "timestamp": "2026-02-28T14:34:53.860470",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ece58975-a93d-499d-b440-372b53c94e6a",
+        "timestamp": "2026-02-28T14:34:53.865069",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "def hello():\n    print(\"Hello from sandbox\")\n\nhello()"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "fce3e59d-995d-41fc-86f8-8cf4c4fa53f5",
+        "timestamp": "2026-02-28T14:34:53.869064",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test.py",
+            "output_response": "Aucune erreur détectée dans test.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "2453856e-a540-443c-80a4-022a5fda052c",
+        "timestamp": "2026-02-28T14:34:53.872583",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "277debd9-7ca8-46ad-b585-8a424990abf8",
+        "timestamp": "2026-02-28T14:34:53.875577",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "7bec3466-272c-49d6-904c-37b6f7bef50f",
+        "timestamp": "2026-02-28T14:34:53.877578",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "0a7347eb-07c1-400f-bf0b-423d11eab4ff",
+        "timestamp": "2026-02-28T14:34:53.880225",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "2bc4769e-09cf-45f0-9a47-30cdcb3e4adf",
+        "timestamp": "2026-02-28T14:34:53.884793",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "8f13b1cb-571b-48df-98c6-82b2b09bc7b6",
+        "timestamp": "2026-02-28T14:34:53.889048",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "3c7d29d2-5233-4d69-b236-4a6a694b2d8d",
+        "timestamp": "2026-02-28T14:34:53.893581",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "0a9db17b-a2fd-44e9-8edb-704a104103fa",
+        "timestamp": "2026-02-28T14:34:53.897621",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "9d3d85b2-8d53-4e0e-90de-59e8907d4750",
+        "timestamp": "2026-02-28T14:34:53.902044",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "57e5da6f-100e-4467-a7b3-005c233c786e",
+        "timestamp": "2026-02-28T14:34:53.905810",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "4d738e09-dd89-4a30-9f62-c41df0490545",
+        "timestamp": "2026-02-28T14:34:53.909685",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "c1b2b473-0431-4390-8f98-7b1c22cba008",
+        "timestamp": "2026-02-28T14:34:53.911675",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "befe5224-bfee-499b-8b5e-d32ede93f1f1",
+        "timestamp": "2026-02-28T14:34:53.915476",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "f8aafe94-180f-4222-b908-6542397311d1",
+        "timestamp": "2026-02-28T14:34:53.919595",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "cf535f3d-d64f-4b5b-9fef-f7146faa7f10",
+        "timestamp": "2026-02-28T14:34:53.922712",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "8ff84ac4-bd73-4097-bb16-09137d84b671",
+        "timestamp": "2026-02-28T14:35:27.291961",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "5c1e2221-c8a7-4e66-b54f-4e62bb920abb",
+        "timestamp": "2026-02-28T14:35:27.298342",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "def hello():\n    print(\"Hello from sandbox\")\n\nhello()"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "452343a2-ae5c-4962-be76-7f60e4da8f3a",
+        "timestamp": "2026-02-28T14:35:27.303271",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test.py",
+            "output_response": "Aucune erreur détectée dans test.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "87c119e0-d8a0-4d1e-8908-be685a370ac2",
+        "timestamp": "2026-02-28T14:35:27.307840",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "2ae9d1fc-e14d-43d9-8579-c147deb29adf",
+        "timestamp": "2026-02-28T14:35:27.313275",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "1b0cdb2c-6b1d-4a4a-b7c4-8f2d4f30ecca",
+        "timestamp": "2026-02-28T14:35:27.316796",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "f87cf3f3-36e2-45c2-86c2-67283d1b5dab",
+        "timestamp": "2026-02-28T14:35:27.319884",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "8d0c7316-2e62-4ffe-80a7-8137820238c2",
+        "timestamp": "2026-02-28T14:35:27.323935",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "9c749d35-fd30-4dac-9808-83d261d86843",
+        "timestamp": "2026-02-28T14:35:27.328127",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "0e858f6b-7ab2-4cbb-9d8c-4ad088fe03f8",
+        "timestamp": "2026-02-28T14:35:27.330840",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "2bd87b9b-2bcf-41dc-8a47-50834e18620e",
+        "timestamp": "2026-02-28T14:35:27.334011",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "7dbaad27-2ed2-42ff-b7ba-13e20f6869e1",
+        "timestamp": "2026-02-28T14:35:27.337589",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "3e9cbac2-23c5-4cb5-87af-0cbd74ee05f0",
+        "timestamp": "2026-02-28T14:35:27.341556",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "81c082cc-a1ba-42cc-9328-61a33f03d962",
+        "timestamp": "2026-02-28T14:35:27.345555",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "36ba2b71-503a-4d5f-b095-b59fd7614311",
+        "timestamp": "2026-02-28T14:35:27.347663",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "92ca1621-c6c5-40d3-a76c-15f2e79e933a",
+        "timestamp": "2026-02-28T14:35:27.351095",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "c82c1337-f157-4f82-ac9d-4516f65c54ef",
+        "timestamp": "2026-02-28T14:35:27.354004",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "58942059-174d-4118-8be7-69a4a06b906b",
+        "timestamp": "2026-02-28T14:35:27.359018",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "d5d25ee3-556c-4c90-9e15-2084cc1ac7c8",
+        "timestamp": "2026-02-28T14:38:17.708581",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "953f160c-0aeb-4233-a918-51b1320a6dc1",
+        "timestamp": "2026-02-28T14:38:17.714146",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "def hello():\n    print(\"Hello from sandbox\")\n\nhello()"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "43c3747d-992e-444b-a967-04a31e1ad6ce",
+        "timestamp": "2026-02-28T14:38:17.718135",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test.py",
+            "output_response": "Aucune erreur détectée dans test.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "dd45099a-d29c-417f-a018-e43514098f8b",
+        "timestamp": "2026-02-28T14:38:17.722470",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "b064cccf-bddb-4efe-aa11-46114a3f07d9",
+        "timestamp": "2026-02-28T14:38:17.724565",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "48fceb45-b3a1-4a9f-b292-2d4c6ced64a9",
+        "timestamp": "2026-02-28T14:38:17.728339",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "d2921909-8dae-400d-91d2-8f1a08ff57b1",
+        "timestamp": "2026-02-28T14:38:17.733332",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "69869439-e2e2-4b8d-8a80-4a54f5a5fd36",
+        "timestamp": "2026-02-28T14:38:17.739849",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "90f78aa2-d15f-4bfd-bb92-19bcbc9fd72c",
+        "timestamp": "2026-02-28T14:38:17.742847",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "1ea7544e-1483-4dd8-8b06-f003b5133245",
+        "timestamp": "2026-02-28T14:38:17.746552",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "6d4e68de-e988-4534-be68-3220bc1c2179",
+        "timestamp": "2026-02-28T14:38:17.752666",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "1a7eccb3-fd19-4468-a894-5add301a1c5b",
+        "timestamp": "2026-02-28T14:38:17.756756",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "c36db0b8-8642-4bda-be03-f7761362c397",
+        "timestamp": "2026-02-28T14:38:17.761176",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "a69b1b0b-6364-4765-b27c-2f9ea844caf6",
+        "timestamp": "2026-02-28T14:38:17.765814",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "06f40a9d-ff49-45c5-8b78-ec11cc9d2ed2",
+        "timestamp": "2026-02-28T14:38:17.770842",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "a3afa189-4ee0-4e8f-8282-b20c9bae4513",
+        "timestamp": "2026-02-28T14:38:17.774404",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "a95429e9-a009-476a-95b1-a28fb95957fe",
+        "timestamp": "2026-02-28T14:38:17.778409",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "2d371358-c5d6-4eb0-87e9-bb1da9a4ef91",
+        "timestamp": "2026-02-28T14:38:17.782423",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "d0773ec7-8869-422e-a0d1-e3b9433457be",
+        "timestamp": "2026-02-28T14:43:38.457385",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "35d5d2b2-360b-46d5-b5a5-9b34337c6ce2",
+        "timestamp": "2026-02-28T14:43:38.462391",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "def hello():\n    print(\"Hello from sandbox\")\n\nhello()"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "cbf2df42-a645-43eb-b62a-6467dca871eb",
+        "timestamp": "2026-02-28T14:43:38.470342",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test.py",
+            "output_response": "Aucune erreur détectée dans test.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "28709800-ddac-497e-a1a8-9e77b8d10814",
+        "timestamp": "2026-02-28T14:43:38.475646",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "555873ae-b576-4207-8b53-d976cf904864",
+        "timestamp": "2026-02-28T14:43:38.483160",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "5f02664c-c4c2-4510-83b5-be5f14512b9e",
+        "timestamp": "2026-02-28T14:43:38.490318",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "98577115-af02-4544-8eba-d0aa39596e55",
+        "timestamp": "2026-02-28T14:43:38.495232",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "469f621a-1a45-4d96-bf6e-405d4d597368",
+        "timestamp": "2026-02-28T14:43:38.498779",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "8263ee81-c876-4d51-a508-2377f4e1ffbc",
+        "timestamp": "2026-02-28T14:43:38.505276",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "ebd8be96-b866-4c0a-9ba4-47a70e9d43c8",
+        "timestamp": "2026-02-28T14:43:38.510376",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "16e4f2cc-8ba7-49e5-b858-37cb6cc273f5",
+        "timestamp": "2026-02-28T14:43:38.515285",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "d26ca36f-8807-4f8a-b44b-9bbb0f5edbf5",
+        "timestamp": "2026-02-28T14:43:38.520903",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "358625fd-ead1-4203-8f54-4e2055e27dfb",
+        "timestamp": "2026-02-28T14:43:38.525415",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "c4fa606b-df38-4dbf-a685-c62d73637089",
+        "timestamp": "2026-02-28T14:43:38.528959",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "7b18ae68-c211-4a66-b6b6-138c5d32865a",
+        "timestamp": "2026-02-28T14:43:38.533960",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "6c98fde9-fdf2-4690-a2cb-0ac544b28073",
+        "timestamp": "2026-02-28T14:43:38.539531",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "89670cfd-8711-4986-a718-5a411a7669a4",
+        "timestamp": "2026-02-28T14:43:38.543515",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "22f0d16d-5040-49c7-8153-a08b6368470a",
+        "timestamp": "2026-02-28T14:43:38.549520",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "f772ab28-b32d-4874-9d44-f36d53adc614",
+        "timestamp": "2026-02-28T14:46:20.257441",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "aadabdeb-9272-4f2f-bada-4e4e25baeb60",
+        "timestamp": "2026-02-28T14:46:20.263462",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "def hello():\n    print(\"Hello from sandbox\")\n\nhello()"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "918d2df2-5902-45ff-979b-af6e81926854",
+        "timestamp": "2026-02-28T14:46:20.270983",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test.py",
+            "output_response": "Aucune erreur détectée dans test.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "443150ec-10a5-4a53-b5aa-55b4715089d0",
+        "timestamp": "2026-02-28T14:46:20.274983",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "661a573a-4d13-43ab-9afb-f5fa4dcc3969",
+        "timestamp": "2026-02-28T14:46:20.278985",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "1ca60479-f5c2-48a4-8602-c9441efbbbff",
+        "timestamp": "2026-02-28T14:46:20.283583",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "67cd4d70-5674-4a5b-9627-deb0a748ed8b",
+        "timestamp": "2026-02-28T14:46:20.289089",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "cba93891-d941-4d69-acc8-05ec0a1b2299",
+        "timestamp": "2026-02-28T14:46:20.293553",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "7855d00e-05c5-40c5-99b2-98c3f43d88fa",
+        "timestamp": "2026-02-28T14:46:20.298016",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "81a0b247-df20-4e06-9d59-07c067a72cb0",
+        "timestamp": "2026-02-28T14:46:20.305066",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "1dd2222d-f812-461e-bb25-ab2a2c55e949",
+        "timestamp": "2026-02-28T14:46:20.345651",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "f81d752e-e412-42c0-b1b3-dd9ccd036e5f",
+        "timestamp": "2026-02-28T14:46:20.353704",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "77fe746f-a90d-4f1c-8c1e-3434bb3c3e2c",
+        "timestamp": "2026-02-28T14:46:20.357654",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "40f94079-41dc-4192-a3eb-561779673404",
+        "timestamp": "2026-02-28T14:46:20.371152",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "38ebff52-a625-42a4-a394-74dc978a264c",
+        "timestamp": "2026-02-28T14:46:20.376160",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "0f6ac927-7dd2-4e3a-b7a1-5fc0588ad4f0",
+        "timestamp": "2026-02-28T14:46:20.380708",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "c598bddb-9683-4133-9426-262efcb1698f",
+        "timestamp": "2026-02-28T14:46:20.385182",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "a21c2e97-362a-4e74-bf53-0a43af3e327e",
+        "timestamp": "2026-02-28T14:46:20.388773",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "010f3d4c-cb1b-4a54-9396-ab98c5717b76",
+        "timestamp": "2026-02-28T14:47:39.248293",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b33a7cba-070f-426f-ba3f-a102e5988ebc",
+        "timestamp": "2026-02-28T14:47:39.252944",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "def hello():\n    print(\"Hello from sandbox\")\n\nhello()"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "63183834-fd81-4f09-aa1e-d4121a662845",
+        "timestamp": "2026-02-28T14:47:39.259939",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test.py",
+            "output_response": "Aucune erreur détectée dans test.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "6a260c6d-75e9-4d2a-9f5d-ab9d910287c2",
+        "timestamp": "2026-02-28T14:47:39.265027",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "1dc8b480-17e0-4a0f-9c6b-495eb05af498",
+        "timestamp": "2026-02-28T14:47:39.272957",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "801aa74d-5cb9-4b48-8f4d-aac5c2b413d7",
+        "timestamp": "2026-02-28T14:47:39.278983",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "79de662a-a12b-49e2-8355-07b0de17fc7f",
+        "timestamp": "2026-02-28T14:47:39.283993",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "19ddde4d-f871-4e7e-bcf0-f4afbaec5b3d",
+        "timestamp": "2026-02-28T14:47:39.290989",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "47ae927d-c1fe-4555-9a8f-e5fa1ed6846f",
+        "timestamp": "2026-02-28T14:47:39.296994",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "83a7ca43-e69e-490b-b155-aaa5057628db",
+        "timestamp": "2026-02-28T14:47:39.303993",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "62eec408-8968-4dfa-8782-f97b5e3b5cde",
+        "timestamp": "2026-02-28T14:47:39.309399",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "942f3ef7-4758-4092-a3cb-083e1bb046aa",
+        "timestamp": "2026-02-28T14:47:39.314171",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "3e15feda-7878-4bb4-a398-d94f9a552ee2",
+        "timestamp": "2026-02-28T14:47:39.322083",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "45ddb336-d936-4fe2-a5e9-176afd84d705",
+        "timestamp": "2026-02-28T14:47:39.327092",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "0a511966-81f2-4112-a35f-f0930f5a1492",
+        "timestamp": "2026-02-28T14:47:39.333357",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "509333f1-b325-4aa8-8dc2-1f9666ae51a2",
+        "timestamp": "2026-02-28T14:47:39.339414",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "3307e862-167b-4654-a29c-e400f301f518",
+        "timestamp": "2026-02-28T14:47:39.344056",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "03b8c17b-7c3c-4b62-b9bc-03d63bd153be",
+        "timestamp": "2026-02-28T14:47:39.348785",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "f10dec54-1c7d-47f0-9f26-b91e2a3b82c3",
+        "timestamp": "2026-02-28T14:48:02.406778",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ba9f13d5-e25d-468e-ac81-cd018cbb32c8",
+        "timestamp": "2026-02-28T14:48:02.411769",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "def hello():\n    print(\"Hello from sandbox\")\n\nhello()"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "949b9be8-1576-4a79-8fe2-9ce8faed33a1",
+        "timestamp": "2026-02-28T14:48:02.418772",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test.py",
+            "output_response": "Aucune erreur détectée dans test.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "9534dfdb-99fc-41c3-861f-966da8cd6b02",
+        "timestamp": "2026-02-28T14:48:02.424776",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "83c69b6b-08e6-4e4e-ac8d-aafd82eca102",
+        "timestamp": "2026-02-28T14:48:02.429744",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "5646a54f-7e60-4345-96e3-64b6f868a7bd",
+        "timestamp": "2026-02-28T14:48:02.438027",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "664ca129-c865-4d8d-a05d-2ac2efc0e8e2",
+        "timestamp": "2026-02-28T14:48:02.443020",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "a7ec4d7e-a6ba-41f2-8fe8-9d4dbf436e72",
+        "timestamp": "2026-02-28T14:48:02.449918",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "72493420-1e8d-4700-b088-cca0c4d77286",
+        "timestamp": "2026-02-28T14:48:02.455486",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "c7070d1b-2f99-45b8-82fd-f797fe6a2e89",
+        "timestamp": "2026-02-28T14:48:02.461459",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "be75440f-5206-4166-9e32-4db34ae682b7",
+        "timestamp": "2026-02-28T14:48:02.469482",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "9a23451c-9d39-46c0-bcaf-b756c64006fd",
+        "timestamp": "2026-02-28T14:48:02.475481",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "f7e5a72f-846a-48a2-937e-39e35222fc9a",
+        "timestamp": "2026-02-28T14:48:02.480550",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "4c0c7e19-0aee-4b3b-beda-f3aeb02b4ee8",
+        "timestamp": "2026-02-28T14:48:02.487587",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "4a55b8a8-797e-4ab5-8fc6-864bd8992876",
+        "timestamp": "2026-02-28T14:48:02.492585",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "d2ded2b0-f269-4760-8f87-7ceebefb285f",
+        "timestamp": "2026-02-28T14:48:02.498604",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "d22b9b5c-6c70-443b-baf6-fc27314c1f92",
+        "timestamp": "2026-02-28T14:48:02.505622",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "1bbfb5c0-e4fa-470e-98d7-20d61687941d",
+        "timestamp": "2026-02-28T14:48:02.510617",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "e9cf8c0b-d1f0-4cfe-9c2d-d3b86b7d218e",
+        "timestamp": "2026-02-28T14:50:24.870092",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "45afff05-5fad-40c7-986f-ab93d758cb72",
+        "timestamp": "2026-02-28T14:50:24.877090",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "def hello():\n    print(\"Hello from sandbox\")\n\nhello()"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b9cc0e22-6153-4870-b3c8-a8c63943cd91",
+        "timestamp": "2026-02-28T14:50:24.884157",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test.py",
+            "output_response": "Aucune erreur détectée dans test.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "846116a0-16d7-4134-99f7-95d79ec66791",
+        "timestamp": "2026-02-28T14:50:24.893382",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "f5da4af3-f093-41eb-a832-370be47ff56a",
+        "timestamp": "2026-02-28T14:50:24.902902",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "8145712a-2604-4636-bd68-bd505d73fd04",
+        "timestamp": "2026-02-28T14:50:24.911415",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "1f4d241d-aa6a-4ab8-a388-a95317fe81f0",
+        "timestamp": "2026-02-28T14:50:24.919416",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "afd389ff-7dc7-456f-b692-aa96ca2e0dea",
+        "timestamp": "2026-02-28T14:50:24.925742",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "90391276-ccb1-453d-ab7d-6a6a1eee4154",
+        "timestamp": "2026-02-28T14:50:24.933274",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "6cbf3976-c553-4bca-acb6-142baf31f8e1",
+        "timestamp": "2026-02-28T14:50:24.940278",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "dcbcbe62-f8a7-41aa-86cc-7f786ff6ff20",
+        "timestamp": "2026-02-28T14:50:24.946888",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "30f2053a-8150-4864-a24e-1af32038aec9",
+        "timestamp": "2026-02-28T14:50:24.953418",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "e330635a-2015-4abc-9f6b-e2cd09fe3c44",
+        "timestamp": "2026-02-28T14:50:24.960449",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "afaf68bf-774d-44c4-9454-7c9686eb2182",
+        "timestamp": "2026-02-28T14:50:24.967424",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "e6b183cc-6c34-45ad-afa2-f5849088317f",
+        "timestamp": "2026-02-28T14:50:24.973431",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "8f065616-2dcf-44e1-8bb8-f8f4682b2619",
+        "timestamp": "2026-02-28T14:50:24.979959",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "a22fcbb2-ef9e-4965-bc23-a804a3306aa0",
+        "timestamp": "2026-02-28T14:50:24.987128",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "318eacfe-e7e1-4d03-ae61-cf4c0a2ee156",
+        "timestamp": "2026-02-28T14:50:24.993126",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "a87a6647-87c8-4864-8b2a-488c7bf5ba4a",
+        "timestamp": "2026-02-28T14:50:37.002578",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "e290562f-6e3c-4dac-91a5-2266f82b1af3",
+        "timestamp": "2026-02-28T14:50:37.009194",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "def hello():\n    print(\"Hello from sandbox\")\n\nhello()"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "2fec99a6-56c7-4828-a829-7fbc0cc22ce8",
+        "timestamp": "2026-02-28T14:50:37.018127",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test.py",
+            "output_response": "Aucune erreur détectée dans test.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "9a41449f-98b0-4d6e-9aa3-b18f5408d35a",
+        "timestamp": "2026-02-28T14:50:37.025732",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "1969b081-40dd-4e07-81ac-cb921f1c03f7",
+        "timestamp": "2026-02-28T14:50:37.030754",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "25acdce0-89a5-4a72-be2c-f8c27191a115",
+        "timestamp": "2026-02-28T14:50:37.035737",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "2652cae2-7180-496a-83e8-c3913d6f3c9f",
+        "timestamp": "2026-02-28T14:50:37.042513",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "545654d2-1ebd-46d4-8bc8-447f1b1a0b47",
+        "timestamp": "2026-02-28T14:50:37.048216",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "fd50c85a-35d7-4958-b334-702a408dc62c",
+        "timestamp": "2026-02-28T14:50:37.054244",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "095ba584-6704-4823-b331-2cbf1589fa60",
+        "timestamp": "2026-02-28T14:50:37.060784",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "afcf04ec-f795-460b-aaa5-dd8ca283fbc6",
+        "timestamp": "2026-02-28T14:50:37.065973",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "53187738-d479-4ea7-82cf-e3266a36fd53",
+        "timestamp": "2026-02-28T14:50:37.071991",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "dba4d523-7ffa-4ae5-8f9c-d99fe930ae71",
+        "timestamp": "2026-02-28T14:50:37.077584",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "9916247e-858c-4a86-9745-f27b35bded6d",
+        "timestamp": "2026-02-28T14:50:37.083608",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "d004cb1f-298d-4a57-8fdf-8ac686c8a64c",
+        "timestamp": "2026-02-28T14:50:37.088515",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "7c87ac86-380b-4703-adae-a7e91cd9fdf1",
+        "timestamp": "2026-02-28T14:50:37.093560",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "5d923fba-fcf7-4b3f-a1da-bac92de84f1f",
+        "timestamp": "2026-02-28T14:50:37.098212",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "e16cda07-2ee1-487a-bacf-649482cd7123",
+        "timestamp": "2026-02-28T14:50:37.104263",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
     }
 ]

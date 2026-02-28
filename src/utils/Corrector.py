@@ -58,7 +58,7 @@ def simple_corrector(filename):
             continue
 
         # garder le reste tel quel
-        corrected_lines.append(stripped_line)
+        corrected_lines.append(line)
 
     # Écriture sécurisée dans sandbox uniquement
     with open(filepath, 'w', encoding='utf-8') as f:

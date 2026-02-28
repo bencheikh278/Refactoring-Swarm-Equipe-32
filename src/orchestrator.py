@@ -23,17 +23,19 @@ class Orchestrator:
         for issue in issues:
             filename = issue["file"] if isinstance(issue, dict) else issue
             self.fixer.fix(self.target_dir, filename)
+           
 
         # Test
         test_result = self.tester.test(self.target_dir)
-
+           
         if test_result.get("passed"):
             return {
                 "success": True,
                 "iterations": iteration + 1
             }
-
+           
         issues = test_result.get("errors", [])
+
 
      return {
         "success": False,

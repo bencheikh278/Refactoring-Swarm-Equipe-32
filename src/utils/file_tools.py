@@ -14,8 +14,13 @@ def write_file(filename, content):
     Écrit du texte dans un fichier du sandbox et logue l'action.
     """
     # Vérification sécurité : n'autoriser que sandbox
-    filepath = os.path.join(SANDBOX_DIR, os.path.basename(filename))
+    # If filename is already absolute → use it
+    if os.path.isabs(filename):
+     filepath = filename
+    else:
+     filepath = os.path.join(SANDBOX_DIR, os.path.basename(filename))
 
+    filepath = os.path.abspath(filepath)
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(content)
 
