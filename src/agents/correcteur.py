@@ -6,7 +6,8 @@ class FixerAgent:
         self.name = "FixerAgent"
 
     def fix(self, filename, issues=None):
-        success = simple_corrector(filename)
+        filepath = os.path.join(target_dir, filename)
+        success = simple_corrector(filepath)
 
         status = "SUCCESS" if success else "FAILURE"
 

@@ -13,7 +13,10 @@ class AuditorAgent:
         """
         issues_list = []
 
-        for file in os.listdir(target_dir):
+        for root, dirs, files in os.walk(target_dir):
+           for file in files:
+            if file.endswith(".py"):
+             filepath = os.path.join(root, file)
             if file.endswith(".py"):
                 filepath = os.path.join(target_dir, file)
                 content, error = read_file_and_check_syntax(filepath)

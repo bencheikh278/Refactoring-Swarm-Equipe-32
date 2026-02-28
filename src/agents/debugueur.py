@@ -7,7 +7,8 @@ class TesterAgent:
 
     def test(self, filename):
 
-        result = run_pytest_for_file(filename)
+        filepath = os.path.join(target_dir, filename)
+        result = run_pytest_for_file(filepath)
 
         status = "SUCCESS" if result["passed"] else "FAILURE"
 

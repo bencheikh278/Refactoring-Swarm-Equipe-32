@@ -31,5 +31,1085 @@
             "output_response": "Analyse simulée - système en cours de développement"
         },
         "status": "SUCCESS"
+    },
+    {
+        "id": "dfcd6326-a097-41e2-a3a5-3a5dafee92aa",
+        "timestamp": "2026-02-28T11:32:36.596096",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b3e0415d-d094-4465-a034-59d93ee6a41e",
+        "timestamp": "2026-02-28T11:32:36.600786",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "c74d4844-f726-4801-8d69-700a7497dc4c",
+        "timestamp": "2026-02-28T11:32:36.602840",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test_example.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "c88b485b-818f-4d2f-bb5c-5153c3b7894b",
+        "timestamp": "2026-02-28T11:32:36.604855",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "12d24ecd-5a2f-4fc3-b8d2-ff728107dcde",
+        "timestamp": "2026-02-28T11:32:36.605841",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox/hidden_dataset",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "12878591-bde5-4bef-94aa-7e39f8990f07",
+        "timestamp": "2026-02-28T11:32:36.607859",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox/hidden_dataset",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "554d79fe-09be-4eb8-badf-815f72d8f1a3",
+        "timestamp": "2026-02-28T13:15:23.135054",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "20548e40-569d-4428-8a73-08fe2656baac",
+        "timestamp": "2026-02-28T13:15:23.135054",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "84e7f1b7-43b5-4667-9d8f-ab197b6dd505",
+        "timestamp": "2026-02-28T13:15:23.142829",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "793723af-ffd2-459d-a59c-b474ab13b285",
+        "timestamp": "2026-02-28T13:15:23.145039",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "16c5f73c-e4a1-406b-aad5-0b624a1955a5",
+        "timestamp": "2026-02-28T13:18:23.187194",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b0f034d0-f68c-4079-8c7b-af0c8b80b288",
+        "timestamp": "2026-02-28T13:18:23.187194",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "c5dc206a-d23d-4318-832e-da85112a5b3c",
+        "timestamp": "2026-02-28T13:18:23.196322",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox/hidden_dataset",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "30dd3eb0-b81c-47c1-9c52-ac5d1895ad81",
+        "timestamp": "2026-02-28T13:18:23.198691",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox/hidden_dataset",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "8d3862fb-6b92-4d0e-a412-1e1f43283a0e",
+        "timestamp": "2026-02-28T13:32:40.173591",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b7455491-1e29-4b88-a40d-a165992b0c93",
+        "timestamp": "2026-02-28T13:32:40.175592",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "7b5080b7-047d-4736-abd3-a8ba684e1356",
+        "timestamp": "2026-02-28T13:32:40.177593",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox/hidden_dataset",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "5d760eb7-8950-41dd-9768-2a5f78e0d953",
+        "timestamp": "2026-02-28T13:32:40.179110",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox/hidden_dataset",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "bece63cc-499a-4f67-b90e-ab92f9dc0d4e",
+        "timestamp": "2026-02-28T13:36:13.037722",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "430cb813-286f-4054-80d0-fb0bd1e38bf3",
+        "timestamp": "2026-02-28T13:36:13.039726",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "6c941e52-09e7-49e4-b3f5-1f783b1f4c14",
+        "timestamp": "2026-02-28T13:36:13.041725",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox/hidden_dataset",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "d72bbf53-9574-4e20-83a9-016e0dd8b256",
+        "timestamp": "2026-02-28T13:36:13.043723",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox/hidden_dataset",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "2fbac46b-2571-4902-888e-dbe7236912b4",
+        "timestamp": "2026-02-28T13:36:29.951544",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "0c2af52f-4d5d-4ead-940d-375f1bea68fd",
+        "timestamp": "2026-02-28T13:36:29.954566",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "f40820aa-5ae8-4117-8e62-df658f3ad74f",
+        "timestamp": "2026-02-28T13:36:29.955571",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox/hidden_dataset",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "31474266-441b-4be5-a34b-47d6c687818d",
+        "timestamp": "2026-02-28T13:36:29.956570",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox/hidden_dataset",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "fb0c9b07-1e8f-42bb-9af2-358627ff9cfe",
+        "timestamp": "2026-02-28T13:41:31.968564",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "abbd89b2-0c02-4b6a-91ae-3f6b8e079bbf",
+        "timestamp": "2026-02-28T13:41:31.973242",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "3afc1db7-a3da-4a7d-8937-8c079f7e95ac",
+        "timestamp": "2026-02-28T13:41:31.975429",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test_local.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "22a7d66d-14a2-48a9-a244-07f16dda0dd2",
+        "timestamp": "2026-02-28T13:41:31.977854",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "191fa87e-f05f-43c2-85d1-a5298fc09784",
+        "timestamp": "2026-02-28T13:41:31.981980",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox/hidden_dataset",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "07f64794-e0d8-4c1e-826c-8574c37a6040",
+        "timestamp": "2026-02-28T13:41:31.985546",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox/hidden_dataset",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "0b8d392a-52ff-41a0-85dd-42e7bac19e44",
+        "timestamp": "2026-02-28T13:42:03.131053",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "a14640d5-c033-4f9e-bcd7-522d5a1239b1",
+        "timestamp": "2026-02-28T13:42:03.133056",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "b07da40e-eeba-44c6-a672-0acc2420166a",
+        "timestamp": "2026-02-28T13:42:03.135052",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test_local.py",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "9f12e1fe-56d5-4d43-8fa8-465ca300e320",
+        "timestamp": "2026-02-28T13:42:03.138559",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "f0b8d00a-1a94-445b-b20d-8a750308966f",
+        "timestamp": "2026-02-28T13:42:03.141614",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox/hidden_dataset",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "e468ff5e-9d22-490d-bbe5-9ac91319f634",
+        "timestamp": "2026-02-28T13:42:03.145254",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox/hidden_dataset",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "7ad562c5-895e-458a-82a9-94a4fecdbd16",
+        "timestamp": "2026-02-28T13:42:19.262060",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "6b8af5c7-da8a-4c03-9ec4-e3628c13e48d",
+        "timestamp": "2026-02-28T13:42:19.266073",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "2737c307-22a5-4a73-ba25-c7b14082be1a",
+        "timestamp": "2026-02-28T13:42:19.268578",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox/hidden_dataset",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "5774841c-92cb-4c50-9275-6f57a1e72a1a",
+        "timestamp": "2026-02-28T13:42:19.271599",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox/hidden_dataset",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "701a015c-e0ba-41e4-b4b1-611a1eb83415",
+        "timestamp": "2026-02-28T13:45:48.230746",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "fcdf2e04-1f43-45d3-94a2-bc83522c650a",
+        "timestamp": "2026-02-28T13:45:48.233752",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "cd5eb941-65b5-4029-a211-05996fa31430",
+        "timestamp": "2026-02-28T13:45:48.238134",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox/hidden_dataset",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "403f0455-be31-4682-a641-2fa2bde40d01",
+        "timestamp": "2026-02-28T13:45:48.239509",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox/hidden_dataset",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "3fb2cda9-6169-4640-95d8-9dea56c7369d",
+        "timestamp": "2026-02-28T13:46:24.169863",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "8233dd16-b353-4d5c-94c0-46422e98efdc",
+        "timestamp": "2026-02-28T13:46:24.174468",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "c17a60c0-df71-4002-9414-99155f4f5c8f",
+        "timestamp": "2026-02-28T13:46:24.179477",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "18647b98-5faf-4f58-8462-10a220b8c3c8",
+        "timestamp": "2026-02-28T13:46:24.184739",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "82c46671-b2a2-4ebd-996c-cf154e9664db",
+        "timestamp": "2026-02-28T13:47:31.162841",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c03c8902-eb0e-4857-b2ab-63be5e91918f",
+        "timestamp": "2026-02-28T13:47:31.165970",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "4a1173db-2c9c-41fa-9f20-1037b416f112",
+        "timestamp": "2026-02-28T13:47:31.170362",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "579c4f75-b2af-480c-83a8-c8a927752c34",
+        "timestamp": "2026-02-28T13:47:31.177142",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "61b5c275-7127-4e0a-9fc4-33ee237796bc",
+        "timestamp": "2026-02-28T13:48:41.952112",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "864116a6-1c4a-410c-9345-8ada1bf65ca6",
+        "timestamp": "2026-02-28T13:48:41.958118",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "16eeaae8-c507-4f00-847e-145eb7275f95",
+        "timestamp": "2026-02-28T13:48:41.961117",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "aab6fda8-b464-4b61-872e-067578b94368",
+        "timestamp": "2026-02-28T13:48:41.964638",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "c477fb43-02df-4b33-9e2d-f82c9064bcd8",
+        "timestamp": "2026-02-28T13:49:27.590524",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f1572ab4-9d54-40bb-b70c-900673a70c18",
+        "timestamp": "2026-02-28T13:49:27.593605",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "15e31cc6-7d81-4d45-a5aa-08d1f1421b85",
+        "timestamp": "2026-02-28T13:49:27.594618",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "e03f351b-cace-45fc-844d-0b3c362747b9",
+        "timestamp": "2026-02-28T13:49:27.597130",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "95de4c02-5e66-4788-8e74-22f9d600d75f",
+        "timestamp": "2026-02-28T13:50:39.311208",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f14b49b3-9756-4f4c-914c-df31325e3e94",
+        "timestamp": "2026-02-28T13:50:39.316713",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "4811ca0b-3e5d-4dec-9448-d8bb5ff83061",
+        "timestamp": "2026-02-28T13:50:39.318723",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "8c6b4d03-0a78-4253-a17d-9dbe1810bd72",
+        "timestamp": "2026-02-28T13:50:39.321849",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "65983134-2f42-4b38-92eb-c4ef79106075",
+        "timestamp": "2026-02-28T13:51:38.179390",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "6c835b85-0ff0-4ee4-98cf-64e5169aaf45",
+        "timestamp": "2026-02-28T13:51:38.183388",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "8a2bb9ee-ecbe-453d-89c1-3bb395aa382c",
+        "timestamp": "2026-02-28T13:51:38.187537",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "6b409ef9-08df-4e66-8db2-d8f856f4e92c",
+        "timestamp": "2026-02-28T13:51:38.191067",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "9fab2e98-d72b-4a19-9eee-a7ecb3657b92",
+        "timestamp": "2026-02-28T13:51:53.849953",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d3940cd4-4d42-467b-b927-c8667659666e",
+        "timestamp": "2026-02-28T13:51:53.852960",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "90cb6505-7d46-4422-82c5-98588e47c59c",
+        "timestamp": "2026-02-28T13:51:53.855979",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "9c20160b-5bdf-4403-ae6a-fc0524829a74",
+        "timestamp": "2026-02-28T13:51:53.860226",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "c5aca922-e084-4234-a96b-87131ef7e8ae",
+        "timestamp": "2026-02-28T13:54:59.857251",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "4bce1268-9d7b-468c-8189-f50b75eba4e8",
+        "timestamp": "2026-02-28T13:54:59.861373",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "3563b1c0-5089-4fe0-892d-27bc4cb139ed",
+        "timestamp": "2026-02-28T13:54:59.865485",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "8f2f9740-f65e-4403-a361-e53ab7b8001c",
+        "timestamp": "2026-02-28T13:54:59.870789",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "1126a61b-a050-4b5d-bc68-4b1e89d75d19",
+        "timestamp": "2026-02-28T13:55:29.262377",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "2c1d8853-fd16-49f9-a1d5-186165181c1b",
+        "timestamp": "2026-02-28T13:55:29.265383",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "cdbdb2a5-bbff-46e1-aed9-0cc837f3a464",
+        "timestamp": "2026-02-28T13:55:29.268384",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "3c97bb0f-1655-4798-ab1d-0cf25f328f41",
+        "timestamp": "2026-02-28T13:55:29.273902",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "8ce1922e-7c4d-4391-8944-1e896d8e8ff5",
+        "timestamp": "2026-02-28T13:59:06.917215",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "94986af1-7f43-4bb2-855f-51a4da1c29fa",
+        "timestamp": "2026-02-28T13:59:06.917215",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "d26347fd-37ae-4e7e-9627-c0bd8f423159",
+        "timestamp": "2026-02-28T13:59:06.926566",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "b2c0231e-050b-4a1b-841c-08ddad3e8ffd",
+        "timestamp": "2026-02-28T13:59:06.927594",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "6c1bd63a-1d36-4b06-b38b-43abcba94998",
+        "timestamp": "2026-02-28T14:05:26.584126",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c5626646-a568-4312-97f6-d556b4b7eb4a",
+        "timestamp": "2026-02-28T14:05:26.587856",
+        "agent": "Tool",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Correction simple",
+            "output_response": ""
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "9bf30a17-43ac-4edd-b1bb-d761cd8601a2",
+        "timestamp": "2026-02-28T14:05:26.590857",
+        "agent": "Correcteur",
+        "model": "local",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Correction ./sandbox",
+            "output_response": "Correction appliquée"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "118ea05b-c7dd-4da5-bcb5-7ee58ff34f2d",
+        "timestamp": "2026-02-28T14:05:26.595857",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests ./sandbox",
+            "output_response": "Fichier introuvable"
+        },
+        "status": "FAILURE"
     }
 ]

@@ -5,9 +5,8 @@ from src.utils.logger import log_experiment, ActionType
 
 
 # Chemin vers sandbox depuis utils
-SANDBOX_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'sandbox')
-os.makedirs(SANDBOX_DIR, exist_ok=True)
-
+SANDBOX_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'sandbox'))
+print("SANDBOX_DIR =", SANDBOX_DIR)
 # -----------------------------
 # Correcteur sécurisé
 # -----------------------------
