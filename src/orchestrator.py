@@ -1,3 +1,4 @@
+import os
 from src.utils.logger import log_experiment, ActionType
 from src.agents.auditeur import AuditorAgent
 from src.agents.correcteur import FixerAgent
@@ -5,63 +6,47 @@ from src.agents.debugueur import TesterAgent
 
 
 class Orchestrator:
-
-    def __init__(self, target_dir, max_iterations=4):
-
+    def __init__(self, target_dir, client, max_iterations=3):
         self.target_dir = target_dir
         self.max_iterations = max_iterations
 
-        #  Initialize agents
-        self.auditor = AuditorAgent()
-        self.fixer = FixerAgent()
+        self.auditor = AuditorAgent(client=client)
+        self.fixer = FixerAgent(client=client)
         self.tester = TesterAgent()
 
     def run(self):
 
-        print(" Running Auditor...")
-
-        audit_report = self.auditor.analyze(self.target_dir)
-
-        print(" Audit Report:", audit_report)
+        print("🔍 Analyse du code en cours...")
+        issues = self.auditor.analyze(self.target_dir)
 
         for iteration in range(self.max_iterations):
+            print(f"\n🔄 Itération {iteration + 1}/{self.max_iterations}")
 
-            print(f"\n ITERATION {iteration + 1}")
+            if isinstance(issues, list):
+                for issue in issues:
+                    filename = issue["file"] if isinstance(issue, dict) else issue
+                    self.fixer.fix(self.target_dir, filename, issues=issue)
+            else:
+                for file in os.listdir(self.target_dir):
+                    if file.endswith(".py"):
+                        self.fixer.fix(self.target_dir, file, issues=issues)
 
-            #  Test all files
             test_result = self.tester.test(self.target_dir)
-
-            print(" TEST RESULT =", test_result)
+            print("TEST RESULT =", test_result)
 
             #  Check if everything passed
             all_passed = all(
-                result["passed"]
-                for result in test_result.values()
+                file_result.get("passed", False)
+                for file_result in test_result.values()
             )
 
             if all_passed:
 
-                print(" ALL TESTS PASSED")
-
-                return {
-                    "success": True,
-                    "iterations": iteration + 1
-                }
-
-            #  Fix failed files
-            for filename, result in test_result.items():
-
-                if not result["passed"]:
-
-                    print(f"Fixing {filename}")
-
-                    self.fixer.fix(
-                        self.target_dir,
-                        filename,
-                        result["output"]
-                    )
-
-        print(" MAX ITERATIONS REACHED")
+            issues = [
+                {"file": fname, "errors": res.get("output", "")}
+                for fname, res in test_result.items()
+                if not res.get("passed", False)
+            ]
 
         return {
             "success": False,

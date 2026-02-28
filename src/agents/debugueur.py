@@ -6,50 +6,31 @@ from src.utils.Corrector import run_pytest_for_file
 class TesterAgent:
 
     def __init__(self):
-
-        self.client = OpenAI(
-            api_key=os.getenv("OPENAI_API_KEY")
-        )
-
-        # 🔥 PROMPT IS USED NOW
-        self.system_prompt = """
-You analyze pytest output.
-Return:
-- passed (true/false)
-- summary
-- recommendations
-Return JSON only.
-"""
+        self.name = "TesterAgent"
 
     def test(self, target_dir):
+        """Exécute les tests pytest sur chaque fichier Python du dossier."""
 
         results = {}
 
         for file in os.listdir(target_dir):
 
-            if file.endswith(".py"):
-
-                pytest_result = run_pytest_for_file(file)
-
-                # Send pytest output to AI
-                response = self.client.chat.completions.create(
-                    model="gpt-4o-mini",
-                    messages=[
-                        {"role": "system", "content": self.system_prompt},
-                        {
-                            "role": "user",
-                            "content": pytest_result["output"]
-                        }
-                    ]
-                )
+                # On passe uniquement le nom du fichier (pas le chemin complet)
+                result = run_pytest_for_file(file)
 
                 ai_evaluation = response.choices[0].message.content
 
-                results[file] = {
-                    "pytest": pytest_result,
-                    "ai_evaluation": ai_evaluation
-                }
+                status = "SUCCESS" if result.get("passed") else "FAILURE"
 
-                print(f" AI Tested {file}")
+                log_experiment(
+                    agent_name="Testeur",
+                    model_used="local",
+                    action=ActionType.DEBUG,
+                    details={
+                        "input_prompt": f"Tests {file}",
+                        "output_response": result.get("output", "")
+                    },
+                    status=status
+                )
 
         return results

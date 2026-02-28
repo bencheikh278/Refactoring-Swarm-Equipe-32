@@ -1,53 +1,47 @@
-from openai import OpenAI
 import os
-from src.utils.file_tools import read_file
+from src.utils.logger import log_experiment, ActionType
 
 
 class AuditorAgent:
 
-    def __init__(self):
-
-        self.client = OpenAI(
-            api_key=os.getenv("OPENAI_API_KEY")
-        )
-
-        # 🔥 PROMPT INSIDE AGENT
-        self.system_prompt = """
-You are a static code auditor.
-Analyze Python code and return a JSON report with:
-- problems
-- file issues
-- improvement suggestions
-Return ONLY JSON.
-"""
+    def __init__(self, client):
+        self.name = "AuditorAgent"
+        self.client = client
 
     def analyze(self, target_dir):
+        """Analyse tous les fichiers Python du dossier cible."""
 
-        import os
-        reports = []
+        full_code = ""
 
-        for file in os.listdir(target_dir):
+        for root, _, files in os.walk(target_dir):
+            for file in files:
+                if file.endswith(".py"):
+                    filepath = os.path.join(root, file)
+                    with open(filepath, "r") as f:
+                        full_code += f"\n\n# FILE: {file}\n"
+                        full_code += f.read()
 
-            if file.endswith(".py"):
+        with open("prompts/auditeur_prompts.md", "r") as f:
+            prompt_template = f.read()
 
-                code = read_file(file)
+        full_prompt = prompt_template + "\n\nVoici le code :\n" + full_code
 
-                if not code:
-                    continue
+        response = self.client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[{"role": "user", "content": full_prompt}]
+        )
 
-                response = self.client.chat.completions.create(
-                    model="gpt-4o-mini",
-                    messages=[
-                        {"role": "system", "content": self.system_prompt},
-                        {"role": "user", "content": code}
-                    ]
-                )
+        result = response.choices[0].message.content
 
-                report = response.choices[0].message.content
+        log_experiment(
+            agent_name="Auditeur",
+            model_used="groq",
+            action=ActionType.ANALYSIS,
+            details={
+                "input_prompt": full_prompt,
+                "output_response": result
+            },
+            status="SUCCESS"
+        )
 
-                reports.append({
-                    "file": file,
-                    "report": report
-                })
-
-        return reports
+        return result
