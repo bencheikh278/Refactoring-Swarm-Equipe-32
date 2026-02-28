@@ -1,4 +1,5 @@
 import os
+from src.utils.file_tools import read_file
 from src.utils.logger import log_experiment, ActionType
 
 
@@ -8,78 +9,61 @@ class FixerAgent:
         self.name = "FixerAgent"
         self.client = client
 
+        # ✅ Load prompt safely
+        base_dir = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), "..")
+        )
+
+        prompt_path = os.path.join(
+            base_dir,
+            "prompts",
+            "correcteur_prompts.md"
+        )
+
+        if not os.path.exists(prompt_path):
+            raise FileNotFoundError(f"Prompt not found: {prompt_path}")
+
+        with open(prompt_path, "r", encoding="utf-8") as f:
+            self.system_prompt = f.read()
+
     def fix(self, target_dir, filename, issues=None):
-        """Corrige un fichier Python selon les issues fournies."""
 
-        #  PROMPT INSIDE AGENT
-        self.system_prompt = """
-You are a Python fixer.
-You receive code + errors.
-Return ONLY corrected full file code.
-Do not add explanations.
-"""
+        filepath = os.path.join(target_dir, filename)
 
-    def fix(self, target_dir, filename, error_output):
-
-        code = read_file(filename)
-
-        if not code:
+        if not os.path.exists(filepath):
+            print(f"⚠ File not found: {filepath}")
             return False
 
-        response = self.client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {"role": "system", "content": self.system_prompt},
-                {
-                    "role": "user",
-                    "content": f"""
-File: {filename}
+        code = read_file(filepath)
+        error_output = issues if issues else ""
+
+        full_prompt = f"""
+{self.system_prompt}
+
+Issues:
+{error_output}
 
 Code:
 {code}
 
-Errors:
-{error_output}
-"""
-                }
-            ]
-        )
-
-        if not os.path.exists(filepath):
-            print(f"⚠️  Fichier introuvable : {filepath}")
-            return False
-
-        with open(filepath, "r") as f:
-            code = f.read()
-
-        with open("prompts/correcteur_prompts.md", "r") as f:
-            system_prompt = f.read()
-
-        full_prompt = f"""
-{system_prompt}
-
-Plan de correction :
-{issues}
-
-Code à corriger ({filename}) :
-{code}
-
-Retourne uniquement le code Python corrigé complet, sans balises markdown.
+Return ONLY fixed full Python file.
 """
 
         response = self.client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
-            messages=[{"role": "user", "content": full_prompt}]
+            model="llama-3.3-70b-versatile",  # ✅ GROQ MODEL
+            messages=[
+                {"role": "system", "content": self.system_prompt},
+                {"role": "user", "content": full_prompt}
+            ]
         )
 
         fixed_code = response.choices[0].message.content
 
-        # Nettoyer les balises markdown si présentes
+        # Remove markdown if model returns it
         if fixed_code.startswith("```"):
-            lines = fixed_code.split("\n")
-            fixed_code = "\n".join(lines[1:-1]) if lines[-1].strip() == "```" else "\n".join(lines[1:])
+            fixed_code = "\n".join(fixed_code.split("\n")[1:-1])
 
-        with open(filepath, "w") as f:
+        with open(filepath, "w", encoding="utf-8") as f:
             f.write(fixed_code)
 
         log_experiment(

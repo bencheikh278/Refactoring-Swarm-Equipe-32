@@ -107,7 +107,7 @@ def run_pytest_on_sandbox():
 
             log_experiment(
                 agent_name="Tool",
-                model_used="local",
+                model_used="groq",
                 action=ActionType.ANALYSIS,
                 details={"input_prompt": "Pytest run", "output_response": result["output"]},
                 status="SUCCESS" if result["passed"] else "FAILURE"
