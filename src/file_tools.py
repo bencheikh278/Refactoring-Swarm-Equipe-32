@@ -2,8 +2,12 @@ import os
 from utils.logger import log_experiment, ActionType  # Pour loguer les actions
 
 # Chemin du sandbox
-SANDBOX_DIR = os.path.join(os.path.dirname(__file__), '..', 'sandbox')
-os.makedirs(SANDBOX_DIR, exist_ok=True)  # Crée le dossier s'il n'existe pas
+
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+SANDBOX_DIR = os.path.join(BASE_DIR, "sandbox")
+
+os.makedirs(SANDBOX_DIR, exist_ok=True)
+print("SANDBOX_DIR =", SANDBOX_DIR)
 
 def write_file(filename, content):
     """
