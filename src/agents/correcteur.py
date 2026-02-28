@@ -1,5 +1,4 @@
 import os
-from src.utils.file_tools import read_file
 from src.utils.logger import log_experiment, ActionType
 
 
@@ -9,7 +8,20 @@ class FixerAgent:
         self.name = "FixerAgent"
         self.client = client
 
-        # ✅ Load prompt safely
+    def fix(self, target_dir, filename, issues=None):
+        """Corrige un fichier Python selon les issues fournies."""
+
+        filepath = os.path.join(target_dir, filename)
+
+        if not os.path.exists(filepath):
+            print(f"⚠️  Fichier introuvable : {filepath}")
+            return False
+
+        # Lire avec UTF-8
+        with open(filepath, "r", encoding="utf-8") as f:
+            code = f.read()
+
+     
         base_dir = os.path.abspath(
             os.path.join(os.path.dirname(__file__), "..")
         )
@@ -20,49 +32,39 @@ class FixerAgent:
             "correcteur_prompts.md"
         )
 
-        if not os.path.exists(prompt_path):
-            raise FileNotFoundError(f"Prompt not found: {prompt_path}")
-
         with open(prompt_path, "r", encoding="utf-8") as f:
-            self.system_prompt = f.read()
-
-    def fix(self, target_dir, filename, issues=None):
-
-        filepath = os.path.join(target_dir, filename)
-
-        if not os.path.exists(filepath):
-            print(f"⚠ File not found: {filepath}")
-            return False
-
-        code = read_file(filepath)
-        error_output = issues if issues else ""
+            system_prompt = f.read()
 
         full_prompt = f"""
-{self.system_prompt}
+{system_prompt}
 
-Issues:
-{error_output}
+Plan de correction :
+{issues}
 
-Code:
+Code a corriger ({filename}) :
 {code}
 
-Return ONLY fixed full Python file.
+Retourne uniquement le code Python corrige complet, sans balises markdown.
+Le fichier doit commencer par: # -*- coding: utf-8 -*-
 """
 
         response = self.client.chat.completions.create(
-            model="llama-3.3-70b-versatile",  # ✅ GROQ MODEL
-            messages=[
-                {"role": "system", "content": self.system_prompt},
-                {"role": "user", "content": full_prompt}
-            ]
+            model="llama-3.3-70b-versatile",
+            messages=[{"role": "user", "content": full_prompt}]
         )
 
         fixed_code = response.choices[0].message.content
 
-        # Remove markdown if model returns it
+        # Nettoyer markdown
         if fixed_code.startswith("```"):
-            fixed_code = "\n".join(fixed_code.split("\n")[1:-1])
+            lines = fixed_code.split("\n")
+            fixed_code = "\n".join(lines[1:-1]) if lines[-1].strip() == "```" else "\n".join(lines[1:])
 
+        # Ajouter encodage si absent
+        if "coding: utf-8" not in fixed_code[:50]:
+            fixed_code = "# -*- coding: utf-8 -*-\n" + fixed_code
+
+        # Ecriture UTF-8
         with open(filepath, "w", encoding="utf-8") as f:
             f.write(fixed_code)
 
