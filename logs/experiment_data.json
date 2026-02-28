@@ -4171,5 +4171,737 @@
             "output_response": ".                                                                        [100%]\n1 passed in 0.00s\n"
         },
         "status": "SUCCESS"
+    },
+    {
+        "id": "e7b5d813-1cdb-4423-a103-06020f40a638",
+        "timestamp": "2026-02-28T15:11:59.953042",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "78db32c7-874a-467a-b615-3cfeb9b864a9",
+        "timestamp": "2026-02-28T15:11:59.961555",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "def test_example():\n    assert 1 + 1 == 2"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "573c5ffe-09f3-4608-ac8d-883f89f7a7a8",
+        "timestamp": "2026-02-28T15:11:59.970081",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test.py",
+            "output_response": "Aucune erreur détectée dans test.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "93a11c6f-9b3a-4946-ae4e-6fdc3dcadd8b",
+        "timestamp": "2026-02-28T15:12:00.586078",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": ".                                                                        [100%]\n1 passed in 0.01s\n"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b923f447-2d02-4904-9d91-fe8d3de062cc",
+        "timestamp": "2026-02-28T15:13:12.554769",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "7c3b5392-30e8-4c52-b0d2-10e57bfb5006",
+        "timestamp": "2026-02-28T15:13:12.563100",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "def test_example():\n    assert 1 + 1 == 3"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "dd2aa4f5-7245-4b03-a4bc-595eb863d25e",
+        "timestamp": "2026-02-28T15:13:12.572235",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test.py",
+            "output_response": "Aucune erreur détectée dans test.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "67028957-bc34-407b-bea4-2f71fc0470b3",
+        "timestamp": "2026-02-28T15:13:13.092432",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.06s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "7f1d0937-87b9-4e71-bc3d-2961f6193e34",
+        "timestamp": "2026-02-28T15:13:13.635115",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.04s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "86a35a7c-1ec9-4a20-baae-fb315d5ecf13",
+        "timestamp": "2026-02-28T15:13:14.139484",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.04s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "e31fbec6-cc87-47ab-a156-329c5bfc9043",
+        "timestamp": "2026-02-28T15:13:14.756976",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.06s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "4381b39b-d3a6-4d13-b064-36d0995b7147",
+        "timestamp": "2026-02-28T15:13:15.301879",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.05s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "7dd166ae-f130-49da-b4a6-011960352cc3",
+        "timestamp": "2026-02-28T15:13:16.013945",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.05s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "9786c14b-9d44-4fbe-869f-67bd8b13ed57",
+        "timestamp": "2026-02-28T15:13:16.690909",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.05s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "2f9fecd3-1e69-4be4-8203-3942466dd69e",
+        "timestamp": "2026-02-28T15:13:17.198949",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.04s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "5f7f4d2c-1629-4fa2-8c4a-2be99005c9df",
+        "timestamp": "2026-02-28T15:13:17.737401",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.04s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "78dd2cd7-56ad-409e-ab54-608e6e21fe8f",
+        "timestamp": "2026-02-28T15:13:18.244847",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.04s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "47f9a460-0d59-4478-9fc1-fa04f74c965a",
+        "timestamp": "2026-02-28T15:13:18.795659",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.05s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "ed7e6d34-1bc1-4a33-b776-5dd578b9610e",
+        "timestamp": "2026-02-28T15:13:19.330037",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.04s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "b8974915-80e1-4422-8617-cb7ca3e86688",
+        "timestamp": "2026-02-28T15:13:19.849122",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.04s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "fd3d9f28-a70d-466c-9e7f-739318752aba",
+        "timestamp": "2026-02-28T15:13:20.386928",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.04s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "45bbeaf0-34a6-4b19-894f-aeb82326a807",
+        "timestamp": "2026-02-28T15:13:20.925110",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.05s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "6697b3a8-1bd8-4dea-a0a3-1cf266a4aa09",
+        "timestamp": "2026-02-28T15:14:51.512435",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "a9cf3676-2cfa-4d96-a592-b534a4cc5b0c",
+        "timestamp": "2026-02-28T15:14:51.521990",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "def test_example():\n    assert 1 + 1 == 3"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "891b0e62-2894-41e2-9267-6afccdd49051",
+        "timestamp": "2026-02-28T15:14:51.530831",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test.py",
+            "output_response": "Aucune erreur détectée dans test.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "6c7c045c-c304-40a0-9276-140eb5d9f064",
+        "timestamp": "2026-02-28T15:14:52.042364",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.04s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "98467645-7c34-414c-82de-46147e8d59ac",
+        "timestamp": "2026-02-28T15:14:52.596678",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.05s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "5acab113-07c7-436e-a949-577188202999",
+        "timestamp": "2026-02-28T15:14:53.151646",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.05s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "777f15ab-d2d4-4d7e-9df2-5ffbf8578b2a",
+        "timestamp": "2026-02-28T15:14:53.728887",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.05s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "47e74024-3460-475b-acde-c9dc00a711c8",
+        "timestamp": "2026-02-28T15:42:08.205149",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "85b9b4e4-3eba-448e-826b-312295dedf9e",
+        "timestamp": "2026-02-28T15:42:08.214809",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "def test_example():\n    assert 1 + 1 == 3"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "6d0bd1e7-051a-4424-ab04-daf50c2b196f",
+        "timestamp": "2026-02-28T15:42:08.221756",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test.py",
+            "output_response": "Aucune erreur détectée dans test.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "0863c43e-e6d5-412c-826f-9f90d607e878",
+        "timestamp": "2026-02-28T15:42:08.819582",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.05s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "596999ea-85c6-4630-9de1-dcc2d619fec5",
+        "timestamp": "2026-02-28T15:42:09.343460",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.04s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "acfc4c42-7b43-46cf-98dd-10dc067fe03a",
+        "timestamp": "2026-02-28T15:42:09.894319",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.04s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "eb98cef0-efd8-4fb0-8eff-64f841dae34f",
+        "timestamp": "2026-02-28T15:42:10.423486",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.05s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "5f7038a7-dd5c-4bbe-995c-73c905102e66",
+        "timestamp": "2026-02-28T16:04:14.474771",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "505311c9-d615-457c-a9e8-b0cb2a082b3c",
+        "timestamp": "2026-02-28T16:07:36.502984",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "2f7b9e3e-299a-44c7-a111-fc0fd378fe64",
+        "timestamp": "2026-02-28T16:10:55.020430",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "89340dcb-b0ff-4017-96cf-27051826a5a8",
+        "timestamp": "2026-02-28T16:11:01.879461",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "e7859f15-470b-45f3-9656-f26ea2244c3f",
+        "timestamp": "2026-02-28T16:12:26.322918",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f8969ac8-458b-4b4e-a2db-01aaaf6776d1",
+        "timestamp": "2026-02-28T16:12:26.572605",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "def test_example():\n    assert 1 + 1 == 3"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "6fa0617e-147e-4949-8312-7301bf4c86f8",
+        "timestamp": "2026-02-28T16:12:26.580625",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test.py",
+            "output_response": "Aucune erreur détectée dans test.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "fc5fe76e-2f72-4d21-abe7-3bc667e05de2",
+        "timestamp": "2026-02-28T16:12:27.304350",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.06s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "09ced53f-6b76-4f75-9627-38780fee3b6d",
+        "timestamp": "2026-02-28T16:12:27.843799",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.05s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "10b99fd9-bcd4-45e1-a032-c20f7031126d",
+        "timestamp": "2026-02-28T16:12:28.378084",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.05s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "00af5f9a-251d-47c8-8ea0-d53e600ca4f1",
+        "timestamp": "2026-02-28T16:12:28.983554",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.05s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "9f312eb1-ed65-4ba5-9b1a-063b6075f84d",
+        "timestamp": "2026-02-28T16:18:09.559418",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b7b956a3-ab8f-4d8d-855d-536fff749afc",
+        "timestamp": "2026-02-28T16:18:09.800460",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "def test_example():\n    assert 1 + 1 == 3"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d2a91b8d-35d9-4eab-843a-343196acc25f",
+        "timestamp": "2026-02-28T16:18:09.800460",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test.py",
+            "output_response": "Aucune erreur détectée dans test.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "26e08e9e-da92-4279-8653-b8e4e5b27bd5",
+        "timestamp": "2026-02-28T16:18:10.320021",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.04s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "62085952-e988-48a2-bae9-0bd81929832f",
+        "timestamp": "2026-02-28T16:18:10.906428",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.06s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "e58eceba-ce21-46e4-80ab-ca39e998fe40",
+        "timestamp": "2026-02-28T16:18:11.424929",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.03s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "8fe29d3d-14ac-4174-8b40-f7e8e51160bb",
+        "timestamp": "2026-02-28T16:18:11.990401",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.04s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "c6d95368-62a5-4e10-a103-bd013abee39c",
+        "timestamp": "2026-02-28T16:18:48.394667",
+        "agent": "System",
+        "model": "N/A",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Initialisation TP",
+            "output_response": "Logger OK"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "06f7c1d7-2883-4631-8e4f-f9a415998fe1",
+        "timestamp": "2026-02-28T16:18:48.623274",
+        "agent": "Tool",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "N/A",
+            "output_response": "def test_example():\n    assert 1 + 1 == 3"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "63a38f6d-4604-457a-9ae5-4eb73001991b",
+        "timestamp": "2026-02-28T16:18:48.623274",
+        "agent": "Auditeur",
+        "model": "local",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyse test.py",
+            "output_response": "Aucune erreur détectée dans test.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f7c244b6-c55e-4f19-92df-7ef76791c566",
+        "timestamp": "2026-02-28T16:18:49.194675",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.04s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "e00bdd8e-b6b4-4213-8e75-800c6a73041d",
+        "timestamp": "2026-02-28T16:18:49.687493",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.04s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "57f6e16f-3aab-4bfd-8521-54a6bef65c37",
+        "timestamp": "2026-02-28T16:18:50.176489",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.04s\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "1d8f8859-462a-4b38-805d-df6994bcc923",
+        "timestamp": "2026-02-28T16:18:50.688868",
+        "agent": "Débogueur",
+        "model": "local",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Tests test.py",
+            "output_response": "F                                                                        [100%]\n================================== FAILURES ===================================\n________________________________ test_example _________________________________\nsandbox\\test.py:2: in test_example\n    assert 1 + 1 == 3\nE   assert (1 + 1) == 3\n=========================== short test summary info ===========================\nFAILED sandbox/test.py::test_example - assert (1 + 1) == 3\n1 failed in 0.04s\n"
+        },
+        "status": "FAILURE"
     }
 ]

@@ -5,7 +5,7 @@ from src.agents.debugueur import TesterAgent
 
 
 class Orchestrator:
-    def __init__(self, target_dir, max_iterations=15):
+    def __init__(self, target_dir, max_iterations=4):
         self.target_dir = target_dir
         self.max_iterations = max_iterations
 
@@ -23,7 +23,7 @@ class Orchestrator:
             # Fix all issues
             for issue in issues:
                 filename = issue["file"] if isinstance(issue, dict) else issue
-                self.fixer.fix(self.target_dir, filename)
+                self.fixer.fix(self.target_dir, filename, test_result[file]["output"])
 
             # Test
             test_result = self.tester.test(self.target_dir)
