@@ -1,7 +1,8 @@
 
 import os
 import subprocess
-from logger import log_experiment, ActionType
+from src.utils.logger import log_experiment, ActionType
+
 
 # Chemin vers sandbox depuis utils
 SANDBOX_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'sandbox')
