@@ -5,42 +5,63 @@ from src.agents.debugueur import TesterAgent
 
 
 class Orchestrator:
+
     def __init__(self, target_dir, max_iterations=4):
+
         self.target_dir = target_dir
         self.max_iterations = max_iterations
 
-        # Initialisation des agents
+        #  Initialize agents
         self.auditor = AuditorAgent()
         self.fixer = FixerAgent()
         self.tester = TesterAgent()
 
     def run(self):
 
-        issues = self.auditor.analyze(self.target_dir)
+        print(" Running Auditor...")
+
+        audit_report = self.auditor.analyze(self.target_dir)
+
+        print(" Audit Report:", audit_report)
 
         for iteration in range(self.max_iterations):
 
-            # Fix all issues
-            for issue in issues:
-                filename = issue["file"] if isinstance(issue, dict) else issue
-                self.fixer.fix(self.target_dir, filename, test_result[file]["output"])
+            print(f"\n ITERATION {iteration + 1}")
 
-            # Test
+            #  Test all files
             test_result = self.tester.test(self.target_dir)
 
-            print("TEST RESULT =", test_result)
+            print(" TEST RESULT =", test_result)
 
+            #  Check if everything passed
             all_passed = all(
-                file_result["passed"]
-                for file_result in test_result.values()
+                result["passed"]
+                for result in test_result.values()
             )
 
             if all_passed:
-                print("🎯 ALL TESTS PASSED")
-                return {"success": True, "iterations": iteration + 1}
 
-            # Update issues for next iteration
-            issues = test_result.get("errors", [])
+                print(" ALL TESTS PASSED")
+
+                return {
+                    "success": True,
+                    "iterations": iteration + 1
+                }
+
+            #  Fix failed files
+            for filename, result in test_result.items():
+
+                if not result["passed"]:
+
+                    print(f"Fixing {filename}")
+
+                    self.fixer.fix(
+                        self.target_dir,
+                        filename,
+                        result["output"]
+                    )
+
+        print(" MAX ITERATIONS REACHED")
 
         return {
             "success": False,

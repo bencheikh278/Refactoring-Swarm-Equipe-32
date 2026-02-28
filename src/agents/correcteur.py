@@ -1,54 +1,45 @@
 from openai import OpenAI
 import os
+from src.utils.file_tools import read_file, write_file
 
 
 class FixerAgent:
 
     def __init__(self):
 
-        # Load API client
-        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
-        # Load system prompt safely
-        base_dir = os.path.dirname(
-            os.path.dirname(os.path.abspath(__file__))
+        self.client = OpenAI(
+            api_key=os.getenv("OPENAI_API_KEY")
         )
 
-        prompt_path = os.path.join(
-         base_dir,
-         "prompts",
-          "correcteur_prompts.md"
-           )
-
-        with open(prompt_path, "r", encoding="utf-8") as f:
-            self.system_prompt = f.read()
+        #  PROMPT INSIDE AGENT
+        self.system_prompt = """
+You are a Python fixer.
+You receive code + errors.
+Return ONLY corrected full file code.
+Do not add explanations.
+"""
 
     def fix(self, target_dir, filename, error_output):
 
-        filepath = os.path.join(target_dir, filename)
+        code = read_file(filename)
 
-        # Read file content
-        with open(filepath, "r", encoding="utf-8") as f:
-            code = f.read()
+        if not code:
+            return False
 
-        #  Call AI model
         response = self.client.chat.completions.create(
-            model="gpt-4o-mini",  
+            model="gpt-4o-mini",
             messages=[
-                {
-                    "role": "system",
-                    "content": self.system_prompt
-                },
+                {"role": "system", "content": self.system_prompt},
                 {
                     "role": "user",
                     "content": f"""
+File: {filename}
+
 Code:
 {code}
 
 Errors:
 {error_output}
-
-Return ONLY corrected code.
 """
                 }
             ]
@@ -56,7 +47,8 @@ Return ONLY corrected code.
 
         fixed_code = response.choices[0].message.content
 
-        with open(filepath, "w", encoding="utf-8") as f:
-            f.write(fixed_code)
+        write_file(filename, fixed_code)
+
+        print(f" Fixed: {filename}")
 
         return True

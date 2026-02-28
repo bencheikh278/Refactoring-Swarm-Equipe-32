@@ -1,44 +1,53 @@
-from src.utils.logger import log_experiment, ActionType
-from src.utils.file_tools import read_file_and_check_syntax
+from openai import OpenAI
 import os
+from src.utils.file_tools import read_file
 
 
 class AuditorAgent:
+
     def __init__(self):
-        self.name = "AuditorAgent"
+
+        self.client = OpenAI(
+            api_key=os.getenv("OPENAI_API_KEY")
+        )
+
+        # 🔥 PROMPT INSIDE AGENT
+        self.system_prompt = """
+You are a static code auditor.
+Analyze Python code and return a JSON report with:
+- problems
+- file issues
+- improvement suggestions
+Return ONLY JSON.
+"""
 
     def analyze(self, target_dir):
-        """
-        Analyse le code et retourne une liste des problèmes trouvés
-        """
-        issues_list = []
 
-        for root, dirs, files in os.walk(target_dir):
-           for file in files:
+        import os
+        reports = []
+
+        for file in os.listdir(target_dir):
+
             if file.endswith(".py"):
-             filepath = os.path.join(root, file)
-            if file.endswith(".py"):
-                filepath = os.path.join(target_dir, file)
-                content, error = read_file_and_check_syntax(filepath)
 
-                if error:
-                    issues_list.append(error)
-                    status = "FAILURE"
-                    message = error
-                else:
-                    status = "SUCCESS"
-                    message = f"Aucune erreur détectée dans {file}"
+                code = read_file(file)
 
-                log_experiment(
-                    agent_name="Auditeur",
-                    model_used="local",
-                    action=ActionType.ANALYSIS,
-                    details={
-                        "input_prompt": f"Analyse {file}",
-                        "output_response": message
-                    },
-                    status=status
+                if not code:
+                    continue
+
+                response = self.client.chat.completions.create(
+                    model="gpt-4o-mini",
+                    messages=[
+                        {"role": "system", "content": self.system_prompt},
+                        {"role": "user", "content": code}
+                    ]
                 )
 
-        return issues_list
-        
+                report = response.choices[0].message.content
+
+                reports.append({
+                    "file": file,
+                    "report": report
+                })
+
+        return reports
