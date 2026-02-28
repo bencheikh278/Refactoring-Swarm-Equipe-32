@@ -11,7 +11,39 @@ class FixerAgent:
     def fix(self, target_dir, filename, issues=None):
         """Corrige un fichier Python selon les issues fournies."""
 
-        filepath = os.path.join(target_dir, filename)
+        #  PROMPT INSIDE AGENT
+        self.system_prompt = """
+You are a Python fixer.
+You receive code + errors.
+Return ONLY corrected full file code.
+Do not add explanations.
+"""
+
+    def fix(self, target_dir, filename, error_output):
+
+        code = read_file(filename)
+
+        if not code:
+            return False
+
+        response = self.client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": self.system_prompt},
+                {
+                    "role": "user",
+                    "content": f"""
+File: {filename}
+
+Code:
+{code}
+
+Errors:
+{error_output}
+"""
+                }
+            ]
+        )
 
         if not os.path.exists(filepath):
             print(f"⚠️  Fichier introuvable : {filepath}")

@@ -1,6 +1,6 @@
-from src.utils.logger import log_experiment, ActionType
-from src.utils.Corrector import run_pytest_for_file
 import os
+from openai import OpenAI
+from src.utils.Corrector import run_pytest_for_file
 
 
 class TesterAgent:
@@ -14,12 +14,11 @@ class TesterAgent:
         results = {}
 
         for file in os.listdir(target_dir):
-            if file.endswith(".py"):
 
                 # On passe uniquement le nom du fichier (pas le chemin complet)
                 result = run_pytest_for_file(file)
 
-                results[file] = result
+                ai_evaluation = response.choices[0].message.content
 
                 status = "SUCCESS" if result.get("passed") else "FAILURE"
 
