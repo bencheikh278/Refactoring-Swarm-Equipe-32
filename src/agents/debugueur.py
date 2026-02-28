@@ -15,9 +15,8 @@ class TesterAgent:
         for file in os.listdir(target_dir):
             if file.endswith(".py"):
 
-                filepath = os.path.join(target_dir, file)
 
-                result = run_pytest_for_file(filepath)
+                result = run_pytest_for_file(file)
 
                 results[file] = result
 
