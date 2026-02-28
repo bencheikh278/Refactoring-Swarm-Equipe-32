@@ -36,12 +36,13 @@ def main():
         result = orchestrator.run()
         
         # Vérifie le résultat
-        if result['success']:
-            print(" MISSION_COMPLETE")
-            sys.exit(0)
+        if result.get("success"):
+           print("🎯 MISSION_COMPLETE")
+           sys.exit(0)
         else:
-            print(f" MISSION_FAILED : {result['message']}")
-            sys.exit(1)
+         print("❌ MISSION_FAILED")
+         print("Details:", result)
+         sys.exit(1)
 
    
         

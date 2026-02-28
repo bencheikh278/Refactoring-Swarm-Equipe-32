@@ -14,26 +14,28 @@ class Orchestrator:
         self.tester = TesterAgent()
 
     def run(self):
-        #analyse phase
 
-        issues = self.auditor.analyze(self.target_dir)
-#phase2 and 3: fixing and testing
+     issues = self.auditor.analyze(self.target_dir)
+  
+     for iteration in range(self.max_iterations):
 
-        for iteration in range(self.max_iterations):
-            #fix
-            self.fixer.fix(self.target_dir, issues)
-#test
-            test_result = self.tester.test(self.target_dir)
+        #  Fix all issues
+        for issue in issues:
+            filename = issue["file"] if isinstance(issue, dict) else issue
+            self.fixer.fix(self.target_dir, filename)
 
-            if test_result["passed"]:
-                return {
-                    "success": True,
-                    "iterations": iteration + 1
-                }
+        # Test
+        test_result = self.tester.test(self.target_dir)
 
-            issues = test_result["errors"]
+        if test_result.get("passed"):
+            return {
+                "success": True,
+                "iterations": iteration + 1
+            }
 
-        return {
-            "success": False,
-            "iterations": self.max_iterations
-        }
+        issues = test_result.get("errors", [])
+
+     return {
+        "success": False,
+        "iterations": self.max_iterations
+    }

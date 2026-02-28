@@ -1,12 +1,16 @@
 from src.utils.file_tools import simple_corrector
 from src.utils.logger import log_experiment, ActionType
+import os
+
 
 class FixerAgent:
     def __init__(self):
         self.name = "FixerAgent"
 
-    def fix(self, filename, issues=None):
+    def fix(self, target_dir, filename, issues=None):
+
         filepath = os.path.join(target_dir, filename)
+
         success = simple_corrector(filepath)
 
         status = "SUCCESS" if success else "FAILURE"
