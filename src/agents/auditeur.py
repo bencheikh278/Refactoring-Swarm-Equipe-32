@@ -1,44 +1,47 @@
-from src.utils.logger import log_experiment, ActionType
-from src.utils.file_tools import read_file_and_check_syntax
 import os
+from src.utils.logger import log_experiment, ActionType
 
 
 class AuditorAgent:
-    def __init__(self):
+
+    def __init__(self, client):
         self.name = "AuditorAgent"
+        self.client = client
 
     def analyze(self, target_dir):
-        """
-        Analyse le code et retourne une liste des problèmes trouvés
-        """
-        issues_list = []
+        """Analyse tous les fichiers Python du dossier cible."""
 
-        for root, dirs, files in os.walk(target_dir):
-           for file in files:
-            if file.endswith(".py"):
-             filepath = os.path.join(root, file)
-            if file.endswith(".py"):
-                filepath = os.path.join(target_dir, file)
-                content, error = read_file_and_check_syntax(filepath)
+        full_code = ""
 
-                if error:
-                    issues_list.append(error)
-                    status = "FAILURE"
-                    message = error
-                else:
-                    status = "SUCCESS"
-                    message = f"Aucune erreur détectée dans {file}"
+        for root, _, files in os.walk(target_dir):
+            for file in files:
+                if file.endswith(".py"):
+                    filepath = os.path.join(root, file)
+                    with open(filepath, "r") as f:
+                        full_code += f"\n\n# FILE: {file}\n"
+                        full_code += f.read()
 
-                log_experiment(
-                    agent_name="Auditeur",
-                    model_used="local",
-                    action=ActionType.ANALYSIS,
-                    details={
-                        "input_prompt": f"Analyse {file}",
-                        "output_response": message
-                    },
-                    status=status
-                )
+        with open("prompts/auditeur_prompts.md", "r") as f:
+            prompt_template = f.read()
 
-        return issues_list
-        
+        full_prompt = prompt_template + "\n\nVoici le code :\n" + full_code
+
+        response = self.client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[{"role": "user", "content": full_prompt}]
+        )
+
+        result = response.choices[0].message.content
+
+        log_experiment(
+            agent_name="Auditeur",
+            model_used="groq",
+            action=ActionType.ANALYSIS,
+            details={
+                "input_prompt": full_prompt,
+                "output_response": result
+            },
+            status="SUCCESS"
+        )
+
+        return result

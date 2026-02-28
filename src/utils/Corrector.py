@@ -1,4 +1,3 @@
-
 import os
 import subprocess
 from src.utils.logger import log_experiment, ActionType
@@ -7,6 +6,7 @@ from src.utils.logger import log_experiment, ActionType
 # Chemin vers sandbox depuis utils
 SANDBOX_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'sandbox'))
 print("SANDBOX_DIR =", SANDBOX_DIR)
+
 # -----------------------------
 # Correcteur sécurisé
 # -----------------------------
@@ -18,7 +18,6 @@ def simple_corrector(filename):
     - Logue chaque correction
     Sécurité : ne peut modifier que les fichiers dans sandbox
     """
-    # Normaliser le chemin complet et vérifier qu'il est dans sandbox
     filepath = os.path.abspath(os.path.join(SANDBOX_DIR, filename))
     if not filepath.startswith(os.path.abspath(SANDBOX_DIR) + os.sep):
         print(f"❌ Interdiction d'écrire en dehors du sandbox : {filepath}")
@@ -42,25 +41,21 @@ def simple_corrector(filename):
         )
         return False
 
-    # Lecture du fichier
     with open(filepath, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
     corrected_lines = []
     for line in lines:
-        stripped_line = line.lstrip()  # supprime espaces début ligne
+        stripped_line = line.lstrip()
 
-        # Ajouter docstring si fonction n'en a pas
         if stripped_line.startswith("def") and '"""' not in stripped_line:
             func_name = stripped_line.split('(')[0].replace("def", "").strip()
-            corrected_lines.append(line.rstrip() + "\n")  # ligne def
-            corrected_lines.append(f"    \"\"\"Fonction {func_name} auto-doc\"\"\"\n")  # docstring indentée
+            corrected_lines.append(line.rstrip() + "\n")
+            corrected_lines.append(f"    \"\"\"Fonction {func_name} auto-doc\"\"\"\n")
             continue
 
-        # garder le reste tel quel
         corrected_lines.append(line)
 
-    # Écriture sécurisée dans sandbox uniquement
     with open(filepath, 'w', encoding='utf-8') as f:
         f.writelines(corrected_lines)
 
@@ -68,7 +63,7 @@ def simple_corrector(filename):
         agent_name="Tool",
         model_used="local",
         action=ActionType.FIX,
-        details={"input_prompt": f"Correction simple du fichier {filename}", "output_response": "Docstring ajoutée si manquante, aucune indentation modifiée"},
+        details={"input_prompt": f"Correction simple du fichier {filename}", "output_response": "Docstring ajoutée si manquante"},
         status="SUCCESS"
     )
 
@@ -88,12 +83,16 @@ def run_pytest_for_file(filename):
         return {"file": filename, "passed": False, "output": "Fichier introuvable"}
 
     result = subprocess.run(
-        ["pytest", filepath, "--tb=short", "-q"],
+        ["python", "-m", "pytest", filepath, "--tb=short", "-q"],
         capture_output=True,
         text=True
     )
 
-    return {"file": filename, "passed": result.returncode == 0, "output": result.stdout.strip() + "\n" + result.stderr.strip()}
+    return {
+        "file": filename,
+        "passed": result.returncode == 0,
+        "output": result.stdout.strip() + "\n" + result.stderr.strip()
+    }
 
 
 # -----------------------------
@@ -106,7 +105,6 @@ def run_pytest_on_sandbox():
             result = run_pytest_for_file(file)
             results.append(result)
 
-            # Log
             log_experiment(
                 agent_name="Tool",
                 model_used="local",
